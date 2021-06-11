@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2021-06-10
+  Features:
+    - Zirconium, Zirconia, Zircon, Cermet added to game.
+    - Compatible with space exploration, krastorio2, deadlock stacking/crating, etc.
