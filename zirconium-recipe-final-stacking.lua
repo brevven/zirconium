@@ -10,7 +10,7 @@ if deadlock then
     deadlock.add_stack("cermet",  "__bzzirconium__/graphics/icons/stacked/cermet-stacked.png", "deadlock-stacking-2", 128)
   end
   if mods["Krastorio2"] then
-    deadlock.add_stack("enriched-zircon", "__bzzirconium__/graphics/icons/stacked/enriched-zircon-stacked.png" , "deadlock-stacking-2", 64)
+    deadlock.add_stack("enriched-zircon", "__bzzirconium__/graphics/icons/stacked/enriched-zircon-stacked.png" , "deadlock-stacking-2", 128)
   end
   if mods["Krastorio2"] or mods["space-exploration"] then
     deadlock.add_stack("zirconium-tungstate", nil, "deadlock-stacking-2", 64)
