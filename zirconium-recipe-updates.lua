@@ -85,3 +85,11 @@ util.add_ingredient("flying-fortress", "zirconia", 80)
 util.add_ingredient("aircraft-afterburner", "zirconia", 5)
 
 util.add_ingredient("mega-furnace", "zirconia", 5)
+if mods.bzlead then
+  util.replace_some_ingredient("breeder-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
+  util.replace_some_ingredient("mox-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
+else
+  util.replace_some_ingredient("breeder-fuel-cell", "iron-plate", 5, "zirconium-plate", 5) 
+  util.replace_some_ingredient("mox-fuel-cell", "iron-plate", 5, "zirconium-plate", 5) 
+end
+util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
