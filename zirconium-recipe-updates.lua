@@ -85,6 +85,11 @@ util.add_ingredient("flying-fortress", "zirconia", 80)
 util.add_ingredient("aircraft-afterburner", "zirconia", 5)
 
 util.add_ingredient("mega-furnace", "zirconia", 5)
+
+util.add_ingredient("nuclear-furnace-4", "zirconia", 400)
+util.add_ingredient("nuclear-furnace-5", "zirconium-plate", 400)
+
+
 if mods.bzlead then
   util.replace_some_ingredient("breeder-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
   util.replace_some_ingredient("mox-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
@@ -93,3 +98,17 @@ else
   util.replace_some_ingredient("mox-fuel-cell", "iron-plate", 5, "zirconium-plate", 5) 
 end
 util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
+
+
+-- Cermet in other mods
+if util.use_cermet() then
+  util.add_ingredient("advanced-assembler-rampant-industry", "cermet", 30)
+  util.add_ingredient("advanced-electric-furnace-rampant-industry", "cermet", 30)
+  util.add_ingredient("advanced-oil-refinery-rampant-industry", "cermet", 30)
+
+  if mods["modules-t4"] then
+    util.add_ingredient("speed-module-4", "cermet", 6)
+    util.add_ingredient("productivity-module-4", "cermet", 6)
+    util.add_ingredient("effectivity-module-4", "cermet", 6)
+  end
+end
