@@ -99,6 +99,14 @@ else
 end
 util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
 
+-- Realistic Reactors
+util.add_ingredient("realistic-reactor", "zirconium-plate", 100)
+util.add_ingredient("breeder-reactor", "zirconium-plate", 100)
+
+-- Schall 
+util.add_ingredient("Schall-radioactive-waste-incinerator", "zirconia", 25)
+
+
 
 -- Cermet in other mods
 if util.use_cermet() then
