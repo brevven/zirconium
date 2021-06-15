@@ -223,7 +223,7 @@ data:extend({
     energy_required = 1,
     ingredients = {{"stone", 2}},
     results = {
-      {type="item", name="zircon", amount=1},
+      {type="item", name="zircon", amount=1, probability=.999999},
       {type="item", name="stone", amount=1, probability=0.5},
     }
   },
@@ -241,7 +241,7 @@ data:extend({
     energy_required = 1,
     ingredients = {{"zircon", 2}},
     results = {
-      {type="item", name="stone", amount=1},
+      {type="item", name="stone", amount=1, probability=.999999},
       {type="item", name="zircon", amount=1, probability=0.5},
     }
   }
