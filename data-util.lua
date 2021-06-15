@@ -7,6 +7,13 @@ function util.get_setting(name)
   return settings.startup[name].value
 end
 
+
+function util.fe_plus(sub)
+  if mods["FactorioExtended-Plus-"..sub] then
+    return true
+  end
+end
+
 function util.use_cermet()
   return util.get_setting("bzzirconium-enable-intermediates") == "yes"
 end

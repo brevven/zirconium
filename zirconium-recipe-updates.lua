@@ -33,9 +33,25 @@ if util.use_cermet() then
   util.add_ingredient("speed-module-3", "cermet", 1)
   util.add_ingredient("productivity-module-3", "cermet", 1)
   util.add_ingredient("effectivity-module-3", "cermet", 1)
-  util.add_ingredient("assembling-machine-3", "cermet", 2)
   util.add_ingredient("beacon", "cermet", 10)
   util.add_ingredient("spidertron", "cermet", 8)
+  if not util.fe_plus("Machines") then
+    util.add_ingredient("assembling-machine-3", "cermet", 2)
+  else
+    util.add_ingredient("assembling-machine-4", "cermet", 2)
+    util.add_ingredient("assembling-machine-5", "cermet", 2)
+    util.add_ingredient("chemical-plant-mk3", "cermet", 2)
+    util.add_ingredient("oil-refinery-mk3", "cermet", 4)
+  end
+
+end
+
+-- More FE+
+if util.fe_plus("Machines") then
+  util.add_ingredient("electric-furnace-mk2", "zirconia", 10)
+  util.add_ingredient("electric-furnace-mk3", "zirconia", 10)
+  util.add_ingredient("oil-refinery-mk2", "zirconia", 10)
+  util.add_ingredient("pumpjack-mk2", "zirconia", 10)
 end
 
 -- Krastorio2
