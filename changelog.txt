@@ -3,6 +3,8 @@ Version: 0.0.6
 Date: 2021-06-16
   Changes:
     - Sorting recipes are fully probabilistic to fix crafting ui confusion
+    - Small tweak to electric furnace recipe
+    - K2 stone brick is now 50/50 stone/zircon
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2021-06-16

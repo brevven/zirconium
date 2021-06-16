@@ -16,7 +16,7 @@
       "? bzsilicon",
       "? bzlead",
       "? bztitanium",
-      "? bztungsten"
+      "? bztungsten >= 0.2.1"
     ],
     "description": "Adds zircon, zirconia, zirconium, and cermet to the base game."
 }
