@@ -128,6 +128,11 @@ util.add_ingredient("MOX-reactor", "zirconium-plate", 400)
 util.add_ingredient("Schall-radioactive-waste-incinerator", "zirconia", 25)
 
 
+-- RITEG
+util.add_ingredient("RITEG-1", "zirconium-plate", 10)
+util.add_ingredient("RITEG-cyan", "zirconium-plate", 10)
+util.add_ingredient("RITEG-breeder", "zirconium-plate", 10)
+
 -- Nixie tubes
 util.add_ingredient("nixie-tube", "zirconium-plate", 1)
 util.add_ingredient("nixie-tube-alpha", "zirconium-plate", 1)
