@@ -135,4 +135,24 @@ if util.use_cermet() then
     util.add_ingredient("productivity-module-4", "cermet", 6)
     util.add_ingredient("effectivity-module-4", "cermet", 6)
   end
+
+  -- Various assemblers
+  if mods["zombiesextended-core"] then
+    util.add_ingredient("assembling-machine-mk1", "cermet", 1)
+    util.add_ingredient("assembling-machine-mk2", "cermet", 1)
+    util.add_ingredient("assembling-machine-mk3", "cermet", 1)
+  end
+
+  -- Bob's machines
+  util.add_ingredient("chemical-plant-3", "cermet", 2)
+  util.add_ingredient("chemical-plant-4", "cermet", 2)
+  util.add_ingredient("assembling-machine-4", "cermet", 3)
+  util.add_ingredient("assembling-machine-5", "cermet", 4)
+  util.add_ingredient("assembling-machine-6", "cermet", 5)
+  util.add_ingredient("oil-refinery-3", "cermet", 10)
+  util.add_ingredient("oil-refinery-4", "cermet", 10)
+  util.add_ingredient("bob-mining-drill-4", "cermet", 5)
+  util.add_ingredient("bob-area-mining-drill-4", "cermet", 5)
 end
+
+

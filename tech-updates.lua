@@ -29,4 +29,11 @@ if util.use_cermet() then
       {"production-science-pack", 1},
       {"utility-science-pack", 1},
     })
+
+  -- Bob's
+  util.add_prerequisite("chemical-plant-3", "cermet")
+  util.add_prerequisite("oil-processing-3", "cermet")
+  util.add_prerequisite("bob-drills-4", "cermet")
+  util.add_prerequisite("bob-area-drills-4", "cermet")
+
 end
