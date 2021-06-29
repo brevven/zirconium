@@ -109,15 +109,20 @@ util.add_ingredient("nuclear-furnace-5", "zirconium-plate", 400)
 if mods.bzlead then
   util.replace_some_ingredient("breeder-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
   util.replace_some_ingredient("mox-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
+  util.replace_some_ingredient("MOX-fuel", "lead-plate", 5, "zirconium-plate", 5) 
 else
   util.replace_some_ingredient("breeder-fuel-cell", "iron-plate", 5, "zirconium-plate", 5) 
   util.replace_some_ingredient("mox-fuel-cell", "iron-plate", 5, "zirconium-plate", 5) 
+  util.replace_some_ingredient("MOX-fuel", "iron-plate", 5, "zirconium-plate", 5) 
 end
 util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
 
 -- Realistic Reactors
 util.add_ingredient("realistic-reactor", "zirconium-plate", 100)
 util.add_ingredient("breeder-reactor", "zirconium-plate", 100)
+
+-- Plutonium Energy
+util.add_ingredient("MOX-reactor", "zirconium-plate", 400)
 
 -- Schall 
 util.add_ingredient("Schall-radioactive-waste-incinerator", "zirconia", 25)
