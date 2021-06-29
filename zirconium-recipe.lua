@@ -65,7 +65,7 @@ data:extend({
     icon = "__bzzirconium__/graphics/icons/zirconium-plate.png",
     icon_size = 128,
     subgroup = "raw-material",
-    order = "z[zirconium-plate]",
+    order = "d[zirconium-plate]",
     stack_size = util.get_stack_size(100)
   },
   {
@@ -73,7 +73,7 @@ data:extend({
     name = "zirconium-plate",
     category = "smelting",
     subgroup = "raw-material",
-    order = "z[zirconium-plate]",
+    order = "d[zirconium-plate]",
     icons = (mods["Krastorio2"] and
         {
           { icon = "__bzzirconium__/graphics/icons/zirconium-plate.png", icon_size = 128 },
@@ -256,7 +256,7 @@ data:extend({
     icons = {{icon = "__bzzirconium__/graphics/icons/zircon-powder.png",
               icon_size = 64, tint = {a=1, r=.95, g=.75, b=0}}},
     subgroup = "intermediate-product",
-    order = "z[z]",
+    order = "z[zz]",
     stack_size = util.get_stack_size(100)
   },
   {
@@ -264,7 +264,7 @@ data:extend({
     name = "zirconium-tungstate",
     category = "crafting",
     subgroup = "intermediate-product",
-    order = "z[z]",
+    order = "z[zz]",
     enabled = false,
     energy_required = 2,
     ingredients = {{"zirconium-plate", 1}, {"tungsten-plate", 1},},
