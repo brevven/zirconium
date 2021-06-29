@@ -141,6 +141,16 @@ util.add_ingredient("SNTD-old-nixie-tube", "zirconium-plate", 1)
 util.add_ingredient("SNTD-nixie-tube", "zirconium-plate", 1)
 util.add_ingredient("SNTD-nixie-tube-small", "zirconium-plate", 1)
 
+-- RFP
+util.add_ingredient("rfp-reactor", "zirconium-plate", 1000)
+util.add_ingredient("rfp-reactor", "zirconia", 1000)
+util.add_ingredient("rfp-aneutronic-reactor", "zirconium-plate", 5000)
+util.add_ingredient("rfp-particle-accelerator", "zirconium-plate", 1000)
+util.add_ingredient("rfp-particle-decelerator", "zirconium-plate", 1000)
+util.replace_some_ingredient("rfp-matter-antimatter-fuel-cell-empty", "steel-plate", 10, "zirconium-plate", 10)
+
+
+
 
 
 -- Cermet in other mods
