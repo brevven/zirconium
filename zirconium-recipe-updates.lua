@@ -123,6 +123,15 @@ util.add_ingredient("breeder-reactor", "zirconium-plate", 100)
 util.add_ingredient("Schall-radioactive-waste-incinerator", "zirconia", 25)
 
 
+-- Nixie tubes
+util.add_ingredient("nixie-tube", "zirconium-plate", 1)
+util.add_ingredient("nixie-tube-alpha", "zirconium-plate", 1)
+util.add_ingredient("nixie-tube-small", "zirconium-plate", 1)
+util.add_ingredient("SNTD-old-nixie-tube", "zirconium-plate", 1)
+util.add_ingredient("SNTD-nixie-tube", "zirconium-plate", 1)
+util.add_ingredient("SNTD-nixie-tube-small", "zirconium-plate", 1)
+
+
 
 -- Cermet in other mods
 if util.use_cermet() then

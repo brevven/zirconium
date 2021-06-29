@@ -36,4 +36,8 @@ if util.use_cermet() then
   util.add_prerequisite("bob-drills-4", "cermet")
   util.add_prerequisite("bob-area-drills-4", "cermet")
 
+
+  -- Nixie tubes
+  util.add_prerequisite("cathodes", "zirconia-processing")
+  util.add_prerequisite("SNTD-nixie-tubes-1", "zirconia-processing")
 end
