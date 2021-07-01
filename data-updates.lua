@@ -1,6 +1,6 @@
 require("tech-updates")
 require("zirconium-recipe-updates")
 require("zircon-matter")
-require("omni")
 require("map-gen-preset-updates")
--- require("tungsten-recipe-5d")
+require("omni")
+require("strange-matter")
