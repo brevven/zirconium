@@ -12,6 +12,7 @@ See changelog.txt
 ### Thanks to
 - [snouz](https://mods.factorio.com/user/snouz) (recolored ore graphics, thumbnail style)
 
-
-#### Localization
+### Localization
+- [Sakuro](https://github.com/sakuro) (ja)
+- [yokmp](https://mods.factorio.com/user/yokmp) (de)
 
