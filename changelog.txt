@@ -3,6 +3,7 @@ Version: 0.0.14
 Date: 2021-07-07
   Features:
     - Russian locale thanks to Thar0l
+    - Some minor bobplates compatibility improvements
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.13
 Date: 2021-07-04

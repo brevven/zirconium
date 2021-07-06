@@ -185,3 +185,6 @@ if util.use_cermet() then
 end
 
 
+-- Bob's - bobplates
+util.replace_some_ingredient("plutonium-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
+
