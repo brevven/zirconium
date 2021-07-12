@@ -15,4 +15,5 @@ See changelog.txt
 ### Localization
 - [Sakuro](https://github.com/sakuro) (ja)
 - [yokmp](https://mods.factorio.com/user/yokmp) (de)
+- [Thar0l](https://github.com/Thar0l) (ru)
 
