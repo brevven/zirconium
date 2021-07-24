@@ -1,5 +1,7 @@
 local util = require("__bzzirconium__.data-util");
 
+local nuclear_plate = mods.bzlead and "lead-plate" or "iron-plate"
+
 
 util.replace_some_ingredient("stone-furnace", "stone", 1, "zircon", 1)
 if not mods["Krastorio2"] then
@@ -17,11 +19,7 @@ util.add_ingredient("explosives", "zirconium-plate", 1)
 util.add_ingredient("nuclear-reactor", "zirconium-plate", 100)
 
 local ufc_amt = mods["Krastorio2"] and 1 or 5
-if mods.bzlead then
-  util.replace_some_ingredient("uranium-fuel-cell", "lead-plate", 5, "zirconium-plate", ufc_amt) 
-else
-  util.replace_some_ingredient("uranium-fuel-cell", "iron-plate", 5, "zirconium-plate", ufc_amt) 
-end
+util.replace_some_ingredient("uranium-fuel-cell", nuclear_plate, 5, "zirconium-plate", ufc_amt) 
 
 if not mods.bztungsten then
   util.add_ingredient("nuclear-fuel", "zirconium-plate", 1)
@@ -106,15 +104,9 @@ util.add_ingredient("nuclear-furnace-4", "zirconia", 400)
 util.add_ingredient("nuclear-furnace-5", "zirconium-plate", 400)
 
 
-if mods.bzlead then
-  util.replace_some_ingredient("breeder-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
-  util.replace_some_ingredient("mox-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
-  util.replace_some_ingredient("MOX-fuel", "lead-plate", 5, "zirconium-plate", 5) 
-else
-  util.replace_some_ingredient("breeder-fuel-cell", "iron-plate", 5, "zirconium-plate", 5) 
-  util.replace_some_ingredient("mox-fuel-cell", "iron-plate", 5, "zirconium-plate", 5) 
-  util.replace_some_ingredient("MOX-fuel", "iron-plate", 5, "zirconium-plate", 5) 
-end
+util.replace_some_ingredient("breeder-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
+util.replace_some_ingredient("mox-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
+util.replace_some_ingredient("MOX-fuel", nuclear_plate, 5, "zirconium-plate", 5) 
 util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
 
 -- Realistic Reactors
@@ -186,5 +178,10 @@ end
 
 
 -- Bob's - bobplates
-util.replace_some_ingredient("plutonium-fuel-cell", "lead-plate", 5, "zirconium-plate", 5) 
+util.replace_some_ingredient("plutonium-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
 
+-- True nukes
+util.replace_some_ingredient("tritium-breeder-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
+
+-- Hazmat suit
+util.replace_some_ingredient("mil-grade-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
