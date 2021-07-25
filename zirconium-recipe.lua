@@ -145,7 +145,7 @@ data:extend({
 })
 
 -- cermet only if setting enabled
-if util.use_cermet() then
+if util.me.use_cermet() then
 local cermet_i = {{"zirconia", 1}, {"copper-plate", 1}}
 if mods.bztitanium then
   local tutil = require("__bztitanium__.data-util");

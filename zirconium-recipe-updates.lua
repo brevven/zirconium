@@ -26,7 +26,7 @@ if not mods.bztungsten then
 end
 
 
-if util.use_cermet() then
+if util.me.use_cermet() then
   util.add_ingredient("rocket-control-unit", "cermet", 1)
   util.add_ingredient("speed-module-3", "cermet", 1)
   util.add_ingredient("productivity-module-3", "cermet", 1)
@@ -57,7 +57,7 @@ if mods["Krastorio2"] then
 
   util.replace_some_ingredient("matter-stabilizer", "imersium-plate", 1, "zirconium-plate", 5)
   util.add_ingredient("kr-advanced-furnace", "zirconia", 60)
-  if util.use_cermet() then
+  if util.me.use_cermet() then
     util.add_ingredient("ai-core", "cermet", 2)
     util.add_ingredient("kr-matter-assembler", "cermet", 4)
   end
@@ -79,7 +79,7 @@ if mods["space-exploration"] then
   util.replace_ingredient("se-heat-shielding-iridium", "stone-tablet", "zirconia")
   util.add_ingredient("se-thruster-suit", "zirconium-plate", 10)
   util.add_ingredient("se-space-thermodynamics-laboratory", "zirconium-plate", 20)
-  if util.use_cermet() then
+  if util.me.use_cermet() then
     util.add_ingredient("se-quantum-processor", "cermet", 1)
     util.add_ingredient("se-space-mechanical-laboratory", "cermet", 40)
   end
@@ -146,7 +146,7 @@ util.replace_some_ingredient("rfp-matter-antimatter-fuel-cell-empty", "steel-pla
 
 
 -- Cermet in other mods
-if util.use_cermet() then
+if util.me.use_cermet() then
   util.add_ingredient("advanced-assembler-rampant-industry", "cermet", 30)
   util.add_ingredient("advanced-electric-furnace-rampant-industry", "cermet", 30)
   util.add_ingredient("advanced-oil-refinery-rampant-industry", "cermet", 30)

@@ -6,7 +6,7 @@ util.add_prerequisite("nuclear-power", "zirconia-processing")
 util.add_prerequisite("explosives", "zirconia-processing")
 util.add_prerequisite("chemical-science-pack", "zirconia-processing")
 
-if util.use_cermet() then
+if util.me.use_cermet() then
   -- production science techs behind cermet
   util.add_prerequisite("effect-transmission", "cermet")
   if not util.fe_plus("Machines") then
