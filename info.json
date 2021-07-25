@@ -15,7 +15,7 @@
       "? omnimatter",
       "? bzsilicon",
       "? bzlead",
-      "? bztitanium",
+      "? bztitanium >= 0.12.4",
       "? bztungsten >= 0.2.1"
     ],
     "description": "Adds zircon, zirconia, zirconium, and cermet to the base game."

@@ -148,8 +148,8 @@ data:extend({
 if util.me.use_cermet() then
 local cermet_i = {{"zirconia", 1}, {"copper-plate", 1}}
 if mods.bztitanium then
-  local tutil = require("__bztitanium__.data-util");
-  table.insert(cermet_i, {tutil.titanium_plate, 1})
+  local tme = require("__bztitanium__.me");
+  table.insert(cermet_i, {tme.titanium_plate, 1})
 end
 if mods.bzsilicon then
   table.insert(cermet_i, {"silica", 1})
