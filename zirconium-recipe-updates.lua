@@ -87,6 +87,11 @@ if mods["space-exploration"] then
     util.add_ingredient("se-hot-thermodynamics-data", "zirconium-plate", 1)
     util.add_product("se-hot-thermodynamics-data", {name="zirconium-plate", amount=1, probability=0.50})
   end
+
+  util.add_ingredient("se-experimental-alloys-data", "zirconium-plate", 1)
+  util.add_to_product("se-experimental-alloys-data", "se-experimental-alloys-data", 1)
+  util.add_to_product("se-experimental-alloys-data", "se-scrap", 1)
+  util.add_to_ingredient("se-experimental-alloys-data", "se-empty-data", 1)
 end
 -- AAI
 util.add_ingredient("industrial-furnace", "zirconium-plate", 4)
@@ -185,3 +190,8 @@ util.replace_some_ingredient("tritium-breeder-fuel-cell", nuclear_plate, 5, "zir
 
 -- Hazmat suit
 util.replace_some_ingredient("mil-grade-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
+
+-- Power Armor Mk3
+util.add_ingredient("pamk3-battmk3", "zirconium-plate", 5)
+util.add_ingredient("pamk3-pamk4", "zirconium-plate", 10)
+

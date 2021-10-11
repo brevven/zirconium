@@ -1,4 +1,4 @@
--- require("modules")
+require("modules")
 require("zirconium-recipe-final-stacking")
 require("zirconium-recipe-final-rrr")
 
