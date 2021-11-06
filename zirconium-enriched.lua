@@ -8,12 +8,12 @@ data:extend({
     name = "enriched-zircon",
     icon_size = 128,
     icon = "__bzzirconium__/graphics/icons/enriched-zircon.png",
-      pictures = {
-        {filename="__bzzirconium__/graphics/icons/enriched-zircon.png", size=128, scale=0.25},
-        {filename="__bzzirconium__/graphics/icons/enriched-zircon-2.png", size=128, scale=0.25},
-        {filename="__bzzirconium__/graphics/icons/enriched-zircon-3.png", size=128, scale=0.25},
-        {filename="__bzzirconium__/graphics/icons/enriched-zircon-4.png", size=128, scale=0.25},
-      },
+    pictures = {
+      {filename="__bzzirconium__/graphics/icons/enriched-zircon.png", size=128, scale=0.125},
+      {filename="__bzzirconium__/graphics/icons/enriched-zircon-2.png", size=128, scale=0.125},
+      {filename="__bzzirconium__/graphics/icons/enriched-zircon-3.png", size=128, scale=0.125},
+      {filename="__bzzirconium__/graphics/icons/enriched-zircon-4.png", size=128, scale=0.125},
+    },
     subgroup = "raw-material",
     order = "e05-a[enriched-ores]-a1[enriched-zircon]",
     stack_size = util.get_stack_size(100),
@@ -38,6 +38,7 @@ data:extend({
     results =
     { 
       {type = "item",  name = "enriched-zircon", amount = 6},
+      mods.bztitanium and {type = "item",  name = "titanium-ore", amount = 1} or nil,
       {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
     },
     crafting_machine_tint =
