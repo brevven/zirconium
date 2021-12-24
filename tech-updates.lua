@@ -40,4 +40,16 @@ if util.me.use_cermet() then
   -- Nixie tubes
   util.add_prerequisite("cathodes", "zirconia-processing")
   util.add_prerequisite("SNTD-nixie-tubes-1", "zirconia-processing")
+
+
+  if mods["space-exploration"] then
+    util.set_tech_recipe("cermet",
+          {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1},
+          })
+    util.add_prerequisite("cermet", "advanced-materials-processing-2")
+    util.remove_prerequisite("cermet", "production-science-pack")
+  end
 end
