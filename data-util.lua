@@ -435,4 +435,10 @@ function add_to_product(recipe, product, amount)
   end
 end
 
+function util.add_minable_result(t, name, result)
+  if data.raw[t] and data.raw[t][name] and data.raw[t][name].minable and data.raw[t][name].minable.results then
+    table.insert(data.raw[t][name].minable.results, result)
+  end
+end
+
 return util
