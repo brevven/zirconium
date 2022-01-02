@@ -25,6 +25,9 @@ if not mods.bztungsten then
   util.add_ingredient("nuclear-fuel", "zirconium-plate", 1)
 end
 
+util.add_ingredient("rocket-engine-nozzle", "zirconia", 1)
+util.add_to_product("rocket-engine-nozzle", "rocket-engine-nozzle", 1)
+util.add_time("rocket-engine-nozzle", 5)
 
 if util.me.use_cermet() then
   util.add_ingredient("rocket-control-unit", "cermet", 1)
