@@ -80,3 +80,13 @@ data:extend({
       stack_size = util.get_stack_size(50)
   },
 })
+
+local richness = data.raw.resource["zircon"].autoplace.richness_expression  
+
+-- Modify lead autoplace richness: 
+-- After 200 tiles it's standard
+-- Up to 100 tiles, it scales up
+data.raw.resource["zircon"].autoplace.richness_expression = 
+  richness * noise.if_else_chain(
+      not noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(200)), 1,
+      (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) + 50)/250)
