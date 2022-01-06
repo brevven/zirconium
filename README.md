@@ -16,4 +16,4 @@ See changelog.txt
 - [Sakuro](https://github.com/sakuro) (ja)
 - [yokmp](https://mods.factorio.com/user/yokmp) (de)
 - [Thar0l](https://github.com/Thar0l) (ru)
-
+- [PlexPt](https://github.com/PlexPt) (zh\_CN)
