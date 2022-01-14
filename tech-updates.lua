@@ -4,7 +4,6 @@ util.add_prerequisite("advanced-material-processing-2", "zirconia-processing")
 util.add_prerequisite("low-density-structure", "zirconia-processing")
 util.add_prerequisite("nuclear-power", "zirconia-processing")
 util.add_prerequisite("explosives", "zirconia-processing")
-util.add_prerequisite("chemical-science-pack", "zirconia-processing")
 
 if util.me.use_cermet() then
   -- production science techs behind cermet

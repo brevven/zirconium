@@ -9,6 +9,11 @@ if not mods["Krastorio2"] then
   util.replace_some_ingredient("electric-furnace", "stone-brick", 5, "zirconia", 5)
 end
 
+util.replace_ingredient("concrete", "iron-ore", "zircon")
+if mods["aai-industry"] then
+  util.add_ingredient("concrete", "zircon", 1)
+end
+
 if mods["Krastorio2"] then
   util.replace_some_ingredient("low-density-structure", "copper-plate", 5, "zirconia", 5)
 else
