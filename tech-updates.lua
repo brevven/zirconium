@@ -5,6 +5,10 @@ util.add_prerequisite("low-density-structure", "zirconia-processing")
 util.add_prerequisite("nuclear-power", "zirconia-processing")
 util.add_prerequisite("explosives", "zirconia-processing")
 
+-- Nixie tubes
+util.add_prerequisite("cathodes", "zirconia-processing")
+util.add_prerequisite("SNTD-nixie-tubes-1", "zirconia-processing")
+
 if util.me.use_cermet() then
   -- production science techs behind cermet
   util.add_prerequisite("effect-transmission", "cermet")
@@ -26,11 +30,6 @@ if util.me.use_cermet() then
   util.add_prerequisite("oil-processing-3", "cermet")
   util.add_prerequisite("bob-drills-4", "cermet")
   util.add_prerequisite("bob-area-drills-4", "cermet")
-
-
-  -- Nixie tubes
-  util.add_prerequisite("cathodes", "zirconia-processing")
-  util.add_prerequisite("SNTD-nixie-tubes-1", "zirconia-processing")
 
 
   if mods["space-exploration"] then
