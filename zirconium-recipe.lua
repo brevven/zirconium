@@ -204,14 +204,16 @@ data:extend({
             {"automation-science-pack", 1},
             {"logistic-science-pack", 1},
             {"chemical-science-pack", 1},
-            {"production-science-pack", 1},
           },
       time = 30,
     },
-    prerequisites = {"production-science-pack"},
+    prerequisites = {"zirconia-processing"},
     order = "c"
   },
 })
+if mods.bztitanium then
+  util.add_prerequisite("cermet", util.titanium_processing)
+end
 end
 
 -- sorting

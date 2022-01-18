@@ -3,7 +3,11 @@ local me = {}
 me.name = "bzzirconium"
 
 function me.use_cermet()
-  return me.get_setting("bzzirconium-enable-intermediates") == "yes"
+  return me.get_setting("bzzirconium-enable-intermediates") == "yes" or me.cermet_lds()
+end
+
+function me.cermet_lds()
+  return me.get_setting("bzzirconium-enable-intermediates") == "lds"
 end
 
 function me.get_setting(name)

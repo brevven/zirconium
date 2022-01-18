@@ -1,4 +1,5 @@
 require("modules")
+require("zirconium-recipe-updates-lds")
 require("zirconium-recipe-final-stacking")
 require("zirconium-recipe-final-rrr")
 
@@ -11,7 +12,6 @@ if mods["space-exploration"] then
   data.raw.recipe["zirconia"].subgroup = "plates"
   data.raw.item["zirconium-plate"].subgroup = "plates"
   data.raw.recipe["zirconium-plate"].subgroup = "plates"
-
 
   -- core mining balancing
   util.add_to_product("se-core-fragment-omni", "zircon", -3)

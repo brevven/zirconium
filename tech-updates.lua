@@ -20,14 +20,6 @@ if util.me.use_cermet() then
 
   -- utility science techs behind cermet
   util.add_prerequisite("rocket-control-unit", "cermet")
-  util.set_tech_recipe("rocket-control-unit", 
-    {
-      {"automation-science-pack", 1},
-      {"logistic-science-pack", 1},
-      {"chemical-science-pack", 1},
-      {"production-science-pack", 1},
-      {"utility-science-pack", 1},
-    })
 
   -- Bob's
   util.add_prerequisite("chemical-plant-3", "cermet")

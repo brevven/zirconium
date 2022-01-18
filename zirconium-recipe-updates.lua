@@ -14,12 +14,6 @@ if mods["aai-industry"] then
   util.add_ingredient("concrete", "zircon", 1)
 end
 
-if mods["Krastorio2"] then
-  util.replace_some_ingredient("low-density-structure", "copper-plate", 5, "zirconia", 5)
-else
-  util.replace_some_ingredient("low-density-structure", "copper-plate", 10, "zirconia", 10)
-end
-
 util.add_ingredient("explosives", "zirconium-plate", 1)
 util.add_ingredient("nuclear-reactor", "zirconium-plate", 100)
 
@@ -82,7 +76,6 @@ end
 
 -- Space Exploration
 if mods["space-exploration"] then
-  util.replace_some_ingredient("se-aeroframe-scaffold", "se-aeroframe-pole", 1, "zirconia", 2)
   util.replace_some_ingredient("se-heat-shielding", "stone-tablet", 10, "zirconia", 10)
   util.replace_ingredient("se-heat-shielding-iridium", "stone-tablet", "zirconia")
   util.add_ingredient("se-thruster-suit", "zirconium-plate", 10)
