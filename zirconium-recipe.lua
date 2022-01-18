@@ -160,6 +160,13 @@ data:extend({
     name = "cermet",
     icon = "__bzzirconium__/graphics/icons/cermet.png",
     icon_size = 128,
+    pictures = {
+      {filename = "__bzzirconium__/graphics/icons/cermet.png",   size=128, scale=0.125},
+      {filename = "__bzzirconium__/graphics/icons/cermet-1.png", size=128, scale=0.125},
+      {filename = "__bzzirconium__/graphics/icons/cermet-2.png", size=128, scale=0.125},
+      {filename = "__bzzirconium__/graphics/icons/cermet-3.png", size=128, scale=0.125},
+      {filename = "__bzzirconium__/graphics/icons/cermet-4.png", size=128, scale=0.125},
+    },
     subgroup = "intermediate-product",
     order = "z[cermet]",
     stack_size = util.get_stack_size(200)
