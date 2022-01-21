@@ -115,6 +115,15 @@ util.replace_some_ingredient("mox-fuel-cell", nuclear_plate, 5, "zirconium-plate
 util.replace_some_ingredient("MOX-fuel", nuclear_plate, 5, "zirconium-plate", 5) 
 util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
 
+-- MadClown's Nuclear
+util.replace_some_ingredient("mixed-oxide", nuclear_plate, 1, "zirconium-plate", 1) 
+util.add_ingredient("thermonuclear-bomb", "zirconium-plate", 100)
+
+-- MadClown's Science
+util.add_ingredient("particle-accelerator-mk1", "zirconium-plate", 1000)
+util.add_ingredient("particle-accelerator-mk2", "zirconium-plate", 1000)
+
+
 -- Realistic Reactors
 util.add_ingredient("realistic-reactor", "zirconium-plate", 100)
 util.add_ingredient("breeder-reactor", "zirconium-plate", 100)
