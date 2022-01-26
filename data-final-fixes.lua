@@ -3,8 +3,7 @@ require("zirconium-recipe-updates-lds")
 require("zirconium-recipe-final-stacking")
 require("zirconium-recipe-final-rrr")
 
-
-local util = require("__bzzirconium__.data-util");
+local util = require("data-util");
 
 if mods["space-exploration"] then 
   -- Organization
