@@ -154,6 +154,9 @@ end
 if mods.bzsilicon then
   table.insert(cermet_i, {"silica", 1})
 end
+if mods.bzaluminum then
+  table.insert(cermet_i, {"alumina", 1})
+end
 data:extend({
   {
     type = "item",
