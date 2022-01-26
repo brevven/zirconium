@@ -102,7 +102,7 @@ data:extend({
 		},
 		results =
 		{
-			{type = "fluid", name = "water", amount = 100, catalyst_amount = 100},
+			{type = "fluid", name = "water", amount = 90, catalyst_amount = 90},
 			{type = "item",  name = "stone", probability = 0.20, amount = 1},
 			{type = "item",  name = "zircon", probability = 0.20, amount = 1},
       mods.bztitanium and
