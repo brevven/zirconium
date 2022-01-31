@@ -5,6 +5,8 @@ Date: 2021-01-26
     - K2: Dirty water filtration quantity
     - Cermet requires 2 zirconia (result quantity also increased by 1)
     - Minor compatibility tweaks
+  Fixes:
+    - Most rocks should now have Zircon in Space Exploration, too
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 2021-01-20
