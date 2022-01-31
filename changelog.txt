@@ -3,6 +3,7 @@ Version: 0.5.3
 Date: 2021-01-26
   Changes:
     - K2: Dirty water filtration quantity
+    - Cermet requires 2 zirconia (result quantity also increased by 1)
     - Minor compatibility tweaks
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2

@@ -146,7 +146,7 @@ data:extend({
 
 -- cermet only if setting enabled
 if util.me.use_cermet() then
-local cermet_i = {{"zirconia", 1}, {"copper-plate", 1}}
+local cermet_i = {{"zirconia", 2}, {"copper-plate", 1}}
 if mods.bztitanium then
   local tme = require("__bztitanium__.me");
   table.insert(cermet_i, {tme.titanium_plate, 1})
@@ -182,10 +182,10 @@ data:extend({
     order = "z[zirconia]",
     icons = { { icon = "__bzzirconium__/graphics/icons/cermet.png", icon_size = 128,  } },
     enabled = false,
-    energy_required = #cermet_i,
+    energy_required = #cermet_i + 1,
     ingredients = cermet_i,
     result = "cermet",
-    result_count = #cermet_i,
+    result_count = #cermet_i + 1,
   },
   {
     type = "technology",
