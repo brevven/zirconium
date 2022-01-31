@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: 2021-01-31
+  Fixes:
+    - LDS recipe compatibility fixes
+---------------------------------------------------------------------------------------------------
 Version: 0.5.3
-Date: 2021-01-26
+Date: 2021-01-30
   Changes:
     - K2: Dirty water filtration quantity
     - Cermet requires 2 zirconia (result quantity also increased by 1)

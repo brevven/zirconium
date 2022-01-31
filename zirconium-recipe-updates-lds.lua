@@ -11,6 +11,8 @@ if util.me.cermet_lds() then
 
   if mods.bztitanium then
     util.remove_ingredient("low-density-structure", "copper-plate")
+  elseif mods.bzaluminum then 
+    -- do nothing, aluminum already added alloy
   elseif mods.Krastorio2 then
     util.set_ingredient("low-density-structure", "copper-plate", 5)
   else
