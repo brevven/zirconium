@@ -7,6 +7,7 @@ Date: 2021-02-02
       saving your game.
     - Huge rocks have a little more zircon, in general.
     - Big rocks have a little less zircon, in general
+    - Reduced zircon richness around starting area a little bit more
   Fixes:
     - Rocks will have less zircon whenever alien biomes mod is used.
 ---------------------------------------------------------------------------------------------------

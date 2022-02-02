@@ -39,7 +39,7 @@ data:extend({
       base_density = 4,
       has_starting_area_placement = true,
       regular_rq_factor_multiplier = 1.2,
-      starting_rq_factor_multiplier = .7,
+      starting_rq_factor_multiplier = 1.2,
     },
 
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
@@ -88,6 +88,6 @@ local richness = data.raw.resource["zircon"].autoplace.richness_expression
 -- Up to 200 tiles, it scales up
 data.raw.resource["zircon"].autoplace.richness_expression = 
   richness * noise.if_else_chain(
-      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(200)),
-      (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) + 50)/250,
+      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(400)),
+      (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) + 50)/450,
       1)
