@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 2021-02-02
+  Changes:
+    - Zircon/stone sorting is now behind a setting, default off. It is no longer necessary for
+      original balance purposes. If you use these recipes, update your mod startup settings before
+      saving your game.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 2021-01-31
   Fixes:

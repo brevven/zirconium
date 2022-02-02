@@ -13,4 +13,10 @@ data:extend({
 		default_value = "lds",
     allowed_values = {"lds", "yes", "no"},
 	},
+  {
+		type = "bool-setting",
+		name = "bzzirconium-enable-sorting",
+		setting_type = "startup",
+		default_value = false,
+	},
 })

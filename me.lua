@@ -10,6 +10,10 @@ function me.cermet_lds()
   return me.get_setting("bzzirconium-enable-intermediates") == "lds"
 end
 
+function me.enable_sorting()
+  return me.get_setting("bzzirconium-enable-sorting")
+end
+
 function me.get_setting(name)
   if settings.startup[name] == nil then
     return nil

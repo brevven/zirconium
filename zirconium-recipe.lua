@@ -220,6 +220,7 @@ end
 end
 
 -- sorting
+if util.me.enable_sorting() then
 data:extend({
   {
     type = "recipe",
@@ -258,6 +259,7 @@ data:extend({
     }
   }
 })
+end
 
 -- Zirconium Tungstate, only if needed
 if mods.bztungsten and (mods["Krastorio2"] or mods["space-exploration"]) then
