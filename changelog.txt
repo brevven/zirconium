@@ -5,6 +5,10 @@ Date: 2021-02-02
     - Zircon/stone sorting is now behind a setting, default off. It is no longer necessary for
       original balance purposes. If you use these recipes, update your mod startup settings before
       saving your game.
+    - Huge rocks have a little more zircon, in general.
+    - Big rocks have a little less zircon, in general
+  Fixes:
+    - Rocks will have less zircon whenever alien biomes mod is used.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 2021-01-31
