@@ -83,11 +83,11 @@ data:extend({
 
 local richness = data.raw.resource["zircon"].autoplace.richness_expression  
 
--- Modify lead autoplace richness: 
--- After 200 tiles it's standard
--- Up to 200 tiles, it scales up
+-- Modify zircon autoplace richness: 
+-- After 500 tiles it's standard
+-- Up to 500 tiles, it scales up
 data.raw.resource["zircon"].autoplace.richness_expression = 
   richness * noise.if_else_chain(
-      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(400)),
-      (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) + 50)/450,
+      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(500)),
+      (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) + 25)/525,
       1)
