@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.7
+Date: 2021-06-05
+  Changes:
+    - K2 & Dectorio: Ploppable rock recipes now require zircon
+    - Reduced zircon richness around starting area a little bit more, yet again
+---------------------------------------------------------------------------------------------------
 Version: 0.5.6
 Date: 2021-02-22
   Features:
