@@ -15,6 +15,9 @@ if deadlock then
   if mods["Krastorio2"] or mods["space-exploration"] then
     deadlock.add_stack("zirconium-tungstate", nil, "deadlock-stacking-2", 64)
   end
+  if mods["space-exploration"] then
+    deadlock.add_stack("zirconium-ingot", nil, "deadlock-stacking-2", nil)
+  end
 end
 
 -- Deadlock crating recipes
@@ -30,6 +33,9 @@ if deadlock_crating then
   end
   if mods["Krastorio2"] or mods["space-exploration"] then
     deadlock_crating.add_crate("zirconium-tungstate", "deadlock-crating-2")
+  end
+  if mods["space-exploration"] then
+    deadlock_crating.add_crate("zirconium-ingot", "deadlock-crating-2")
   end
 end
 

@@ -6,12 +6,6 @@ require("zirconium-recipe-final-rrr")
 local util = require("data-util");
 
 if mods["space-exploration"] then 
-  -- Organization
-  data.raw.item["zirconia"].subgroup = "plates"
-  data.raw.recipe["zirconia"].subgroup = "plates"
-  data.raw.item["zirconium-plate"].subgroup = "plates"
-  data.raw.recipe["zirconium-plate"].subgroup = "plates"
-
   -- core mining balancing
   util.add_to_product("se-core-fragment-omni", "zircon", -3)
 end
