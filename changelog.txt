@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: 2021-07-03
+  Fixes:
+    - SE: Fix ingot locale string
+    - SE: Prod modules for molten
+  Changes:
+    - SE: Remove byproduct from molten altogether, regardless of setting.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 2021-07-02
   Fixes:

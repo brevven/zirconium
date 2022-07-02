@@ -118,8 +118,6 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   if mods["Krastorio2"] then
     util.set_item_subgroup("enriched-zircon", "zirconium")
     se_delivery_cannon_recipes["enriched-zirconium"] = {name= "enriched-zirconium"}
-  else
-    if util.me.byproduct() then util.add_product("molten-zirconium", {"titanium-ore", 6}) end
   end
 
 else

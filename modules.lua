@@ -7,6 +7,7 @@ if mods["Krastorio2"] then
 end
 if mods["space-exploration"] then
   table.insert(recipes, "zirconia-smelting-vulcanite")
+  table.insert(recipes, "molten-zirconium")
   if mods["Krastorio2"] then
     table.insert(recipes, "enriched-zirconia-smelting-vulcanite")
   end
