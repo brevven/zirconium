@@ -30,8 +30,8 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     order = "a-h-z-z",
   }
   })
-  data.raw.item["zirconia"].subgroup = "zirconium"
-  data.raw.item["zirconium-plate"].subgroup = "zirconium"
+  util.set_item_subgroup("zirconia", "zirconium")
+  util.set_item_subgroup("zirconium-plate", "zirconium")
   data:extend({
   {
     type = "item",
@@ -116,6 +116,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot-to-plate"})
   if mods["Krastorio2"] then
+    util.set_item_subgroup("enriched-zirconium", "zirconium")
     se_delivery_cannon_recipes["enriched-zirconium"] = {name= "enriched-zirconium"}
   else
     util.add_product("molten-zirconium", {"titanium-ore", 6})

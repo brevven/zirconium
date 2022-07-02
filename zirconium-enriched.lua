@@ -24,6 +24,7 @@ data:extend({
     icon = "__bzzirconium__/graphics/icons/enriched-zircon.png",
     icon_size = 128,
     category = "chemistry",
+    main_product = "enriched-zircon",
     energy_required = 3,
     enabled = false,
     always_show_made_in = true,
@@ -48,7 +49,6 @@ data:extend({
       tertiary = {r = 0.690, g = 0.768, b = 0.870, a = 0.000}, 
       quaternary = {r = 0.0, g = 0.980, b = 0.603, a = 0.900}
     },
-    subgroup = "raw-material",
     order = "e03[enriched-zircon]"
   },
   {
