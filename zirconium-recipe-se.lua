@@ -116,7 +116,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot-to-plate"})
   if mods["Krastorio2"] then
-    util.set_item_subgroup("enriched-zirconium", "zirconium")
+    util.set_item_subgroup("enriched-zircon", "zirconium")
     se_delivery_cannon_recipes["enriched-zirconium"] = {name= "enriched-zirconium"}
   else
     if util.me.byproduct() then util.add_product("molten-zirconium", {"titanium-ore", 6}) end
