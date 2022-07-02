@@ -20,7 +20,6 @@ data:extend({
     type = "recipe",
     name = "zirconia",
     category = "smelting",
-    subgroup = "raw-material",
     order = "z[zirconia]",
     icons = (mods["Krastorio2"] and
         {
@@ -32,6 +31,7 @@ data:extend({
 ),
     normal = (mods["Krastorio2"] and
         {
+          main_product = "zirconia",
           enabled = false,
           energy_required = 8,
           ingredients = {{"zircon", 5}},
@@ -41,6 +41,7 @@ data:extend({
           } or {{"zirconia", 5}}
         } or
         {
+          main_product = "zirconia",
           enabled = false,
           energy_required = 3.2,
           ingredients = {{"zircon", 1}},
@@ -51,6 +52,7 @@ data:extend({
         }),
     expensive =
     {
+      main_product = "zirconia",
       enabled = false,
       energy_required = 3.2,
       ingredients = {{"zircon", 1}},
