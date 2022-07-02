@@ -2,6 +2,10 @@ local me = {}
 
 me.name = "bzzirconium"
 
+function me.byproduct()
+  return me.get_setting("bzzirconium-byproduct")
+end
+
 function me.use_cermet()
   return me.get_setting("bzzirconium-enable-intermediates") == "yes" or me.cermet_lds()
 end

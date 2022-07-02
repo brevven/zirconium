@@ -35,7 +35,7 @@ data:extend({
           enabled = false,
           energy_required = 8,
           ingredients = {{"zircon", 5}},
-          results = mods.bztitanium and  {
+          results = mods.bztitanium and util.me.byproduct() and {
             {name="zirconia", amount_min=4, amount_max=5},
             {name="titanium-ore", amount=1, probability=.5}
           } or {{"zirconia", 5}}
@@ -44,7 +44,7 @@ data:extend({
           enabled = false,
           energy_required = 3.2,
           ingredients = {{"zircon", 1}},
-          results = mods.bztitanium and  {
+          results = mods.bztitanium and util.me.byproduct() and {
             {name="zirconia", amount=2, probability=.95},
             {name="titanium-ore", amount=1, probability=.1}
           } or {{"zirconia", 2}}
@@ -54,7 +54,7 @@ data:extend({
       enabled = false,
       energy_required = 3.2,
       ingredients = {{"zircon", 1}},
-      results = mods.bztitanium and  {
+      results = mods.bztitanium and util.me.byproduct() and {
         {"zirconia", 1}, {name="titanium-ore", amount=1, probability=.05}
         } or {{"zirconia", 2}}
     }

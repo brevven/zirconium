@@ -7,6 +7,12 @@ data:extend({
     allow_blank = true,
 	},
   {
+		type = "bool-setting",
+		name = "bzzirconium-byproduct",
+		setting_type = "startup",
+    default_value = true,
+	},
+  {
 		type = "string-setting",
 		name = "bzzirconium-enable-intermediates",
 		setting_type = "startup",

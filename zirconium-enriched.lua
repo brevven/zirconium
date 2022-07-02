@@ -39,8 +39,8 @@ data:extend({
     results =
     { 
       {type = "item",  name = "enriched-zircon", amount = 6},
-      mods.bztitanium and {type = "item",  name = "titanium-ore", amount = 1} or nil,
-      {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25}
+      {type = "fluid", name = "dirty-water", amount = 25, catalyst_amount = 25},
+      (mods.bztitanium and util.me.byproduct()) and {type = "item",  name = "titanium-ore", amount = 1} or nil,
     },
     crafting_machine_tint =
     {
@@ -105,7 +105,7 @@ data:extend({
 			{type = "fluid", name = "water", amount = 90, catalyst_amount = 90},
 			{type = "item",  name = "stone", probability = 0.20, amount = 1},
 			{type = "item",  name = "zircon", probability = 0.20, amount = 1},
-      mods.bztitanium and
+      (mods.bztitanium and util.me.byproduct()) and
       {type = "item",  name = "titanium-ore", probability = 0.20, amount = 1} or nil,
 		},
 		crafting_machine_tint =

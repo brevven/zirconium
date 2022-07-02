@@ -3,6 +3,8 @@ Version: 0.6.2
 Date: 2021-07-02
   Changes:
     - SE K2 subgroup cleanup
+  Features:
+    - Setting to turn off byproduct when used with Titanium mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
 Date: 2021-07-02
