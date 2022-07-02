@@ -44,8 +44,8 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   {
     type = "fluid",
     name = "molten-zirconium",
-    default_temperature = 600,
-    max_temperature = 600,
+    default_temperature = 1852,
+    max_temperature = 1852,
     base_color = {r=121, g=80, b=80},
     flow_color = {r=121, g=80, b=80},
     icons = {{icon = "__bzzirconium__/graphics/icons/molten-zirconium.png", icon_size = 128}},
@@ -109,6 +109,9 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     order = "a-c-b"
   },
   })
+  util.add_effect("se-pyroflux-smelting", {type = "unlock-recipe", recipe= "molten-zirconium"})
+  util.add_effect("se-pyroflux-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot"})
+  util.add_effect("se-pyroflux-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot-to-plate"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "molten-zirconium"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot-to-plate"})
