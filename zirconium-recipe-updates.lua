@@ -1,6 +1,7 @@
 local util = require("__bzzirconium__.data-util");
 
 local nuclear_plate = mods.bzlead and "lead-plate" or "iron-plate"
+local nuclear_z = data.raw.item["zircaloy-4"] and "zircaloy-4" or "zirconium-plate"
 
 
 util.replace_some_ingredient("stone-furnace", "stone", 1, "zircon", 1)
@@ -14,14 +15,15 @@ if mods["aai-industry"] then
   util.add_ingredient("concrete", "zircon", 1)
 end
 
+util.multiply_recipe("explosives", 2)
 util.add_ingredient("explosives", "zirconium-plate", 1)
-util.add_ingredient("nuclear-reactor", "zirconium-plate", 100)
+util.add_ingredient("nuclear-reactor", nuclear_z, 100)
 
 local ufc_amt = mods["Krastorio2"] and 1 or 5
-util.replace_some_ingredient("uranium-fuel-cell", nuclear_plate, 5, "zirconium-plate", ufc_amt) 
+util.replace_some_ingredient("uranium-fuel-cell", nuclear_plate, 5, nuclear_z, ufc_amt) 
 
 if not mods.bztungsten then
-  util.add_ingredient("nuclear-fuel", "zirconium-plate", 1)
+  util.add_ingredient("nuclear-fuel", nuclear_z, 1)
 end
 
 util.add_ingredient("rocket-engine-nozzle", "zirconia", 1)
@@ -63,6 +65,8 @@ if mods["Krastorio2"] then
     util.add_ingredient("ai-core", "cermet", 2)
     util.add_ingredient("kr-matter-assembler", "cermet", 4)
   end
+  util.add_ingredient("kr-fusion-reactor", nuclear_z, 350)
+  util.add_ingredient("kr-antimatter-reactor", nuclear_z, 350)
 
   util.replace_some_ingredient("stone-brick", "stone", 5, "zircon", 5)
   if mods["space-exploration"] then
@@ -93,6 +97,8 @@ if mods["space-exploration"] then
   util.add_to_product("se-experimental-alloys-data", "se-experimental-alloys-data", 1)
   util.add_to_product("se-experimental-alloys-data", "se-scrap", 1)
   util.add_to_ingredient("se-experimental-alloys-data", "se-empty-data", 1)
+
+  util.add_ingredient("se-antimatter-reactor", nuclear_z, 350)
 end
 -- AAI
 util.add_ingredient("industrial-furnace", "zirconium-plate", 4)
@@ -107,17 +113,17 @@ util.add_ingredient("aircraft-afterburner", "zirconia", 5)
 util.add_ingredient("mega-furnace", "zirconia", 5)
 
 util.add_ingredient("nuclear-furnace-4", "zirconia", 400)
-util.add_ingredient("nuclear-furnace-5", "zirconium-plate", 400)
+util.add_ingredient("nuclear-furnace-5", nuclear_z, 400)
 
 
-util.replace_some_ingredient("breeder-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
-util.replace_some_ingredient("mox-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
-util.replace_some_ingredient("MOX-fuel", nuclear_plate, 5, "zirconium-plate", 5) 
+util.replace_some_ingredient("breeder-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
+util.replace_some_ingredient("mox-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
+util.replace_some_ingredient("MOX-fuel", nuclear_plate, 5, nuclear_z, 5) 
 util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
 
 -- MadClown's Nuclear
-util.replace_some_ingredient("mixed-oxide", nuclear_plate, 1, "zirconium-plate", 1) 
-util.add_ingredient("thermonuclear-bomb", "zirconium-plate", 100)
+util.replace_some_ingredient("mixed-oxide", nuclear_plate, 1, nuclear_z, 1) 
+util.add_ingredient("thermonuclear-bomb", nuclear_z, 100)
 
 -- MadClown's Science
 util.add_ingredient("particle-accelerator-mk1", "zirconium-plate", 1000)
@@ -125,20 +131,20 @@ util.add_ingredient("particle-accelerator-mk2", "zirconium-plate", 1000)
 
 
 -- Realistic Reactors
-util.add_ingredient("realistic-reactor", "zirconium-plate", 100)
-util.add_ingredient("breeder-reactor", "zirconium-plate", 100)
+util.add_ingredient("realistic-reactor", nuclear_z, 100)
+util.add_ingredient("breeder-reactor", nuclear_z, 100)
 
 -- Plutonium Energy
-util.add_ingredient("MOX-reactor", "zirconium-plate", 400)
+util.add_ingredient("MOX-reactor", nuclear_z, 400)
 
 -- Schall 
 util.add_ingredient("Schall-radioactive-waste-incinerator", "zirconia", 25)
 
 
 -- RITEG
-util.add_ingredient("RITEG-1", "zirconium-plate", 10)
-util.add_ingredient("RITEG-cyan", "zirconium-plate", 10)
-util.add_ingredient("RITEG-breeder", "zirconium-plate", 10)
+util.add_ingredient("RITEG-1", nuclear_z, 10)
+util.add_ingredient("RITEG-cyan", nuclear_z, 10)
+util.add_ingredient("RITEG-breeder", nuclear_z, 10)
 
 -- Nixie tubes
 util.add_ingredient("nixie-tube", "zirconium-plate", 1)
@@ -149,12 +155,12 @@ util.add_ingredient("SNTD-nixie-tube", "zirconium-plate", 1)
 util.add_ingredient("SNTD-nixie-tube-small", "zirconium-plate", 1)
 
 -- RFP
-util.add_ingredient("rfp-reactor", "zirconium-plate", 1000)
+util.add_ingredient("rfp-reactor", nuclear_z, 1000)
 util.add_ingredient("rfp-reactor", "zirconia", 1000)
-util.add_ingredient("rfp-aneutronic-reactor", "zirconium-plate", 5000)
+util.add_ingredient("rfp-aneutronic-reactor", nuclear_z, 5000)
 util.add_ingredient("rfp-particle-accelerator", "zirconium-plate", 1000)
 util.add_ingredient("rfp-particle-decelerator", "zirconium-plate", 1000)
-util.replace_some_ingredient("rfp-matter-antimatter-fuel-cell-empty", "steel-plate", 10, "zirconium-plate", 10)
+util.replace_some_ingredient("rfp-matter-antimatter-fuel-cell-empty", "steel-plate", 10, nuclear_z, 10)
 
 
 
@@ -193,13 +199,13 @@ end
 
 
 -- Bob's - bobplates
-util.replace_some_ingredient("plutonium-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
+util.replace_some_ingredient("plutonium-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
 
 -- True nukes
-util.replace_some_ingredient("tritium-breeder-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
+util.replace_some_ingredient("tritium-breeder-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
 
 -- Hazmat suit
-util.replace_some_ingredient("mil-grade-fuel-cell", nuclear_plate, 5, "zirconium-plate", 5) 
+util.replace_some_ingredient("mil-grade-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
 
 -- Power Armor Mk3
 util.add_ingredient("pamk3-battmk3", "zirconium-plate", 5)

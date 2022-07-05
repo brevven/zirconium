@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 2021-07-05
+  Changes:
+    - With Tin enabled, use Zircaloy-4 in nuclear recipes
+    - Reduce amount of zirconium needed for explosives
+    - Some other minor recipe tweaks
+---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 2021-07-03
   Fixes:

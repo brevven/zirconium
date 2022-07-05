@@ -288,8 +288,37 @@ data:extend({
     result_count = 2,
   },
 })
-util.add_effect("zirconia-processing", {
-        type = "unlock-recipe",
-        recipe = "zirconium-tungstate"
-      })
+util.add_effect("zirconia-processing", { type = "unlock-recipe", recipe = "zirconium-tungstate" })
+end
+
+-- Zircaloy-4 only if needed
+if mods.bztin then
+local zircaloyi = {
+  {"zirconium-plate", 17},
+  {"tin-plate", 2},
+  {"iron-plate", 1},
+}
+data:extend({
+  {
+    type = "item",
+    name = "zircaloy-4",
+    icons = {{icon = "__bzzirconium__/graphics/icons/zircaloy-4.png", icon_size = 128}},
+    subgroup = "intermediate-product",
+    order = "z[zz]",
+    stack_size = util.get_stack_size(100),
+  },
+  {
+    type = "recipe",
+    name = "zircaloy-4",
+    category = "crafting",
+    order = "z[zz]",
+    enabled = false,
+    energy_required = 60,
+    ingredients = zircaloyi,
+    result = "zircaloy-4",
+    result_count = 20,
+  },
+})
+local zircaloyt = mods.bzaluminum and "basic-alloys" or "zirconia-processing"
+util.add_effect(zircaloyt, { type = "unlock-recipe", recipe = "zircaloy-4" })
 end
