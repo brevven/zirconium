@@ -6,6 +6,7 @@ Date: 2021-07-03
     - SE: Prod modules for molten
   Changes:
     - SE: Remove byproduct from molten altogether, regardless of setting.
+    - SE: Ingot time reduced a bit
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 2021-07-02

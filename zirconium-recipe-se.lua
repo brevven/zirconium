@@ -79,7 +79,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     name = "zirconium-ingot",
     category = "casting",
     results = {{"zirconium-ingot", 1}},
-    energy_required = 100,
+    energy_required = 75,
     ingredients = {
       {type = "fluid", name = "molten-zirconium", amount = 750},
     },
