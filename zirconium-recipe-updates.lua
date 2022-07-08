@@ -3,6 +3,10 @@ local util = require("__bzzirconium__.data-util");
 local nuclear_plate = mods.bzlead and "lead-plate" or "iron-plate"
 local nuclear_z = data.raw.item["zircaloy-4"] and "zircaloy-4" or "zirconium-plate"
 
+if mods.bzfoundry and data.raw.item["foundry"] then
+  util.set_to_founding("zircaloy-4")
+end
+
 
 util.replace_some_ingredient("stone-furnace", "stone", 1, "zircon", 1)
 if not mods["Krastorio2"] then

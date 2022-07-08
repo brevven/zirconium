@@ -319,6 +319,5 @@ data:extend({
     result_count = 20,
   },
 })
-local zircaloyt = mods.bzaluminum and "basic-alloys" or "zirconia-processing"
-util.add_effect(zircaloyt, { type = "unlock-recipe", recipe = "zircaloy-4" })
+util.add_effect("zirconia-processing", { type = "unlock-recipe", recipe = "zircaloy-4" })
 end

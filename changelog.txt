@@ -1,17 +1,23 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.6
-Date: 
+Date: 2022-07-08
+  Fixes:
+    - Tin: Zircaloy 4 unlocks on zirconia processing in all loadouts.
+    - Tin: Zircaloy 4 should correctly be made in foundry if enabled.
+  Changes:
     - ja locale updates thanks to Sakuro
+    - Added chat command ZirconiumRecipes to unlock all zirconium recipes. 
+      Use if a recipe does not unlock properly.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.5
-Date: 2021-07-05
+Date: 2022-07-05
   Changes:
     - With Tin enabled, use Zircaloy-4 in nuclear recipes
     - Reduce amount of zirconium needed for explosives
     - Some other minor recipe tweaks
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.4
-Date: 2021-07-03
+Date: 2022-07-03
   Fixes:
     - SE: Fix ingot locale string
     - SE: Prod modules for molten
@@ -20,42 +26,42 @@ Date: 2021-07-03
     - SE: Ingot time reduced a bit
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.3
-Date: 2021-07-02
+Date: 2022-07-02
   Fixes:
     - More SE subgroup cleanup
     - Locale string fix for new setting
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
-Date: 2021-07-02
+Date: 2022-07-02
   Fixes:
     - SE K2 subgroup cleanup
   Features:
     - Setting to turn off byproduct when used with Titanium mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
-Date: 2021-07-02
+Date: 2022-07-02
   Changes:
     - SE Update smelting unlock
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: 2021-07-01
+Date: 2022-07-01
   Changes:
     - Support for Space Exploration 0.6
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
-Date: 2021-06-05
+Date: 2022-06-05
   Changes:
     - K2 & Dectorio: Ploppable rock recipes now require zircon
     - Reduced zircon richness around starting area a little bit more, yet again
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.6
-Date: 2021-02-22
+Date: 2022-02-22
   Features:
     - ko locale, thanks to x2605
     - ja locale updates thanks to Sakuro
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.5
-Date: 2021-02-02
+Date: 2022-02-02
   Changes:
     - Zircon/stone sorting is now behind a setting, default off. It is no longer necessary for
       original balance purposes. If you use these recipes, update your mod startup settings before
@@ -67,12 +73,12 @@ Date: 2021-02-02
     - Rocks will have less zircon whenever alien biomes mod is used.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.4
-Date: 2021-01-31
+Date: 2022-01-31
   Fixes:
     - LDS recipe compatibility fixes
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.3
-Date: 2021-01-30
+Date: 2022-01-30
   Changes:
     - K2: Dirty water filtration quantity
     - Cermet requires 2 zirconia (result quantity also increased by 1)
@@ -81,17 +87,17 @@ Date: 2021-01-30
     - Most rocks should now have Zircon in Space Exploration, too
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
-Date: 2021-01-20
+Date: 2022-01-20
   Changes:
     - MadClown's vanilla nuclear, Science compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.1
-Date: 2021-01-19
+Date: 2022-01-19
   Fixes:
     - Fix issue with richness scaling too fast
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.0
-Date: 2021-01-15
+Date: 2022-01-15
   Changes:
     - New default setting for cermet:
       Cermet is used in LDS (instead of pure Zirconia). Recipe is balanced
@@ -105,29 +111,29 @@ Date: 2021-01-15
     - Zirconium processing no longer a prerequisite to chemical science
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.4
-Date: 2021-01-07
+Date: 2022-01-07
   Changes:
     - Update plate icon
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
-Date: 2021-01-06
+Date: 2022-01-06
   Changes:
     - Polish (pl) l10n, thanks to S3BA
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
-Date: 2021-01-05
+Date: 2022-01-05
   Changes:
     - Simplified Chinese (zh_CN) l10n, thanks to PlexPt
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
-Date: 2021-01-05
+Date: 2022-01-05
   Fixes:
     - Big rocks now also give zircon
   Changes:
     - Zircon is less rich closer to starting position, same richness after 200 tiles.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.0
-Date: 2021-01-03
+Date: 2022-01-03
   Changes:
     - Tungsten sets basic rocket-engine-nozzle recipe, this mod updates it with zirconia
 ---------------------------------------------------------------------------------------------------
