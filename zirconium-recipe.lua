@@ -321,3 +321,19 @@ data:extend({
 })
 util.add_effect("zirconia-processing", { type = "unlock-recipe", recipe = "zircaloy-4" })
 end
+
+if mods.DoubleFurnace then
+data:extend({
+  {
+    type = "recipe",
+    name = "double-zirconium",
+    category = "double-smelting",
+    enabled = false,
+    energy_required = 19.2,
+    ingredients = {{"zircon", 3}},
+    results =  {{"zirconium-plate", 2}},
+  }
+})
+util.add_effect("zirconia-processing", {type = "unlock-recipe", recipe = "double-zirconium"})
+end
+

@@ -24,7 +24,9 @@ util.add_ingredient("explosives", "zirconium-plate", 1)
 util.add_ingredient("nuclear-reactor", nuclear_z, 100)
 
 local ufc_amt = mods["Krastorio2"] and 1 or 5
-util.replace_some_ingredient("uranium-fuel-cell", nuclear_plate, 5, nuclear_z, ufc_amt) 
+if not mods.Atomic_Overhaul then
+  util.replace_some_ingredient("uranium-fuel-cell", nuclear_plate, 5, nuclear_z, ufc_amt) 
+end
 
 if not mods.bztungsten then
   util.add_ingredient("nuclear-fuel", nuclear_z, 1)
@@ -118,6 +120,9 @@ util.add_ingredient("mega-furnace", "zirconia", 5)
 
 util.add_ingredient("nuclear-furnace-4", "zirconia", 400)
 util.add_ingredient("nuclear-furnace-5", nuclear_z, 400)
+
+-- Atomic Overhaul
+util.replace_ingredient("empty-fuel-cell-recipe", "iron-plate", nuclear_z)
 
 
 util.replace_some_ingredient("breeder-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
