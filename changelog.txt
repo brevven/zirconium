@@ -11,6 +11,7 @@ Date: 2022-07-11
   Changes:
     - Atomic Overhaul compatibility
     - Double Furnace recipe
+  Localization:
     - ru locale updates thanks to Pergamum663
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.6
@@ -18,8 +19,9 @@ Date: 2022-07-08
   Fixes:
     - Tin: Zircaloy 4 unlocks on zirconia processing in all loadouts.
     - Tin: Zircaloy 4 should correctly be made in foundry if enabled.
-  Changes:
+  Localization:
     - ja locale updates thanks to Sakuro
+  Changes:
     - Added chat command ZirconiumRecipes to unlock all zirconium recipes. 
       Use if a recipe does not unlock properly.
 ---------------------------------------------------------------------------------------------------
@@ -70,7 +72,7 @@ Date: 2022-06-05
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.6
 Date: 2022-02-22
-  Features:
+  Localization:
     - ko locale, thanks to x2605
     - ja locale updates thanks to Sakuro
 ---------------------------------------------------------------------------------------------------
@@ -131,12 +133,12 @@ Date: 2022-01-07
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 2022-01-06
-  Changes:
+  Localization:
     - Polish (pl) l10n, thanks to S3BA
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
 Date: 2022-01-05
-  Changes:
+  Localization:
     - Simplified Chinese (zh_CN) l10n, thanks to PlexPt
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
@@ -155,7 +157,7 @@ Version: 0.3.2
 Date: 2021-12-31
   Features:
     - Rocks now give some zircon
-  Changes:
+  Localization:
     - JA l10n updates
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
@@ -201,13 +203,14 @@ Date: 2021-07-21
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.14
 Date: 2021-07-07
-  Features:
+  Localization:
     - Russian locale thanks to Thar0l
+  Features:
     - Some minor bobplates compatibility improvements
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.13
 Date: 2021-07-04
-  Features:
+  Localization:
     - German locale thanks to Yokmp
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.12
@@ -244,7 +247,7 @@ Version: 0.0.7
 Date: 2021-06-17
   Features:
     - More compatibility: zombie's, bob's machines, mining, etc
-  Changes:
+  Localization:
     - ja locale thanks to Sakuro
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
