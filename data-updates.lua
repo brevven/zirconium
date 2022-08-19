@@ -11,5 +11,8 @@ local util = require("data-util");
 
 if mods.Asteroid_Mining then
   require("__Asteroid_Mining__.scripts.addmodule")
-  amfunc.addtype("zircon", {a = 0,r = 0.75,g = 0.4,b = 0.5})
+  if not data.raw.item["asteroid-titanium-ore"] then
+    -- For Titanium we only add if it's not already added by Asteroid_Mining
+    amfunc.addtype("titanium-ore", {a = 0,r = 40, g = 70, b =110})
+  end
 end

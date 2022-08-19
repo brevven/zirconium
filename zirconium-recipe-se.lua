@@ -5,23 +5,10 @@ if mods["space-exploration"] then
   se_delivery_cannon_recipes["zircon"] = {name= "zircon"}
   se_delivery_cannon_recipes["zirconia"] = {name= "zirconia"}
   se_delivery_cannon_recipes["zirconium-plate"] = {name= "zirconium-plate"}
+  util.se_landfill({ore="zircon"})
 
-  data:extend({
-  {
-    type = "recipe",
-    icons = {
-      { icon = "__base__/graphics/icons/landfill.png", icon_size = 64, icon_mipmaps = 3 },
-      { icon = "__bzzirconium__/graphics/icons/zircon.png", icon_size = 64, scale = 0.25},
-    },
-    name = "landfill-zircon",
-    category = "hard-recycling",
-    order = "z-b-zircon",
-    subgroup = "terrain",
-    result = "landfill",
-    ingredients = {{"zircon", 50}},
-  }
-  })
 if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
+  util.se_matter({ore="zircon", energy_required=1.5, quant_out=10, stream_out=60})
   data:extend({
   {
     type = "item-subgroup",

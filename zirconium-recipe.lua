@@ -1,6 +1,6 @@
 -- Zirconium smelting, etc
 
-local util = require("__bzzirconium__.data-util");
+local util = require("data-util");
 
 -- data:extend({
 --   
