@@ -121,6 +121,12 @@ util.add_ingredient("mega-furnace", "zirconia", 5)
 util.add_ingredient("nuclear-furnace-4", "zirconia", 400)
 util.add_ingredient("nuclear-furnace-5", nuclear_z, 400)
 
+-- ShiveroFixes's nuclear
+util.replace_some_ingredient("shiveros_thorium_fuel_cell", nuclear_plate, 5, nuclear_z, 5)
+util.replace_some_ingredient("shiveros_plutonium_fuel_cell", nuclear_plate, 5, nuclear_z, 5)
+util.replace_some_ingredient("shiveros_uranium-233_fuel_cell", nuclear_plate, 50, nuclear_z, 50)
+util.replace_some_ingredient("shiveros_uranium-234_fuel_cell", nuclear_plate, 25, nuclear_z, 25)
+
 -- Atomic Overhaul
 util.replace_ingredient("empty-fuel-cell-recipe", "iron-plate", nuclear_z)
 
