@@ -5,6 +5,7 @@ require("map-gen-preset-updates")
 require("omni")
 require("strange-matter")
 require("zircon-rocks")
+require("modules")
 
 
 local util = require("data-util");
