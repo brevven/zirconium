@@ -106,6 +106,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     util.set_item_subgroup("enriched-zircon", "zirconium")
     se_delivery_cannon_recipes["enriched-zirconium"] = {name= "enriched-zirconium"}
   end
+  se_delivery_cannon_recipes["zirconium-ingot"] = {name= "zirconium-ingot"}
 
 else
   -- Organization

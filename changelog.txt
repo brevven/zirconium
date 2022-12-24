@@ -6,6 +6,8 @@ Date: 2022-12-24
   Localization:
     - de updates thanks to NathanU
     - zh updates thanks to sunnytan53
+  Changes:
+    - SE ingot in delivery cannon
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.12
 Date: 2022-10-11
