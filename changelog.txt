@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.14
+Date: 2023-01-17
+  Changes:
+    - Deadlock stacking/crating: zircon moved to tier 1
+  Features:
+    - (Beta) Add support for crafting efficiency mod
+---------------------------------------------------------------------------------------------------
 Version: 0.6.13
 Date: 2022-12-24
   Fixes:

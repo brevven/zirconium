@@ -1,19 +1,8 @@
 -- Enable prod modules for all zircon, etc recipes
+local util = require("data-util");
 
-recipes = {"zirconium-plate", "zirconia", "cermet"}
-if mods["Krastorio2"] then
-  table.insert(recipes, "enriched-zirconia-smelting")
-  table.insert(recipes, "enriched-zircon")
-end
-if mods["space-exploration"] then
-  table.insert(recipes, "zirconia-smelting-vulcanite")
-  table.insert(recipes, "molten-zirconium")
-  if mods["Krastorio2"] then
-    table.insert(recipes, "enriched-zirconia-smelting-vulcanite")
-  end
-end
 
-for i, recipe in pairs(recipes) do
+for i, recipe in pairs(util.me.recipes) do
   if data.raw.recipe[recipe] then
     for j, module in pairs(data.raw.module) do
       if module.effect then

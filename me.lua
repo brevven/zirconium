@@ -1,6 +1,12 @@
 local me = {}
 
 me.name = "bzzirconium"
+me.recipes = {"zirconium-plate", "zirconia", "cermet",
+           "enriched-zirconia-smelting",
+           "enriched-zircon",
+           "zirconia-smelting-vulcanite",
+           "molten-zirconium",
+           "enriched-zirconia-smelting-vulcanite",}
 
 function me.byproduct()
   return me.get_setting("bzzirconium-byproduct") and not me.get_setting("bz-no-byproduct")
