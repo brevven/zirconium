@@ -19,6 +19,7 @@ data:extend({
   {
     type = "recipe",
     name = "zirconia",
+    subgroup = "raw-material",
     category = "smelting",
     order = "z[zirconia]",
     icons = (mods["Krastorio2"] and
