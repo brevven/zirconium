@@ -19,6 +19,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   })
   util.set_item_subgroup("zirconia", "zirconium")
   util.set_item_subgroup("zirconium-plate", "zirconium")
+  data.raw.recipe["zirconia"].subgroup = "zirconium"
   data:extend({
   {
     type = "item",
