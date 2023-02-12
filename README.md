@@ -12,6 +12,9 @@ See changelog.txt
 ### Thanks to
 - [snouz](https://mods.factorio.com/user/snouz) (recolored ore graphics, thumbnail style)
 
+### Compatibility
+- [nihilistzsche](https://github.com/nihilistzsche)
+
 ### Localization
 - [Sakuro](https://github.com/sakuro) (ja)
 - [yokmp](https://mods.factorio.com/user/yokmp) (de)
