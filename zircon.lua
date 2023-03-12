@@ -1,7 +1,7 @@
 local resource_autoplace = require('resource-autoplace');
 local noise = require('noise');
 
-local util = require("__bzzirconium__.data-util");
+local util = require("data-util");
 
 data:extend({
 	{
@@ -23,6 +23,8 @@ data:extend({
     flags = {"placeable-neutral"},
     order="a-b-a",
     map_color = {r=0.90, g=0.70, b=0.70},
+    tree_removal_probability = 0.7,
+    tree_removal_max_distance = 32 * 32,
     minable =
     {
       hardness = 1,

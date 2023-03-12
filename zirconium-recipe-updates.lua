@@ -1,4 +1,4 @@
-local util = require("__bzzirconium__.data-util");
+local util = require("data-util");
 
 local nuclear_plate = mods.bzlead and "lead-plate" or "iron-plate"
 local nuclear_z = data.raw.item["zircaloy-4"] and "zircaloy-4" or "zirconium-plate"
@@ -8,9 +8,13 @@ if mods.bzfoundry and data.raw.item["foundry"] then
 end
 
 
-util.replace_some_ingredient("stone-furnace", "stone", 1, "zircon", 1)
+if util.me.early() then
+  util.replace_some_ingredient("stone-furnace", "stone", 1, "zircon", 1)
+end
 if not mods["Krastorio2"] then
-  util.replace_some_ingredient("steel-furnace", "stone-brick", 4, "zircon", 6)
+  if util.me.early() then
+    util.replace_some_ingredient("steel-furnace", "stone-brick", 4, "zircon", 6)
+  end
   util.replace_some_ingredient("electric-furnace", "stone-brick", 5, "zirconia", 5)
 end
 
@@ -74,7 +78,9 @@ if mods["Krastorio2"] then
   util.add_ingredient("kr-fusion-reactor", nuclear_z, 350)
   util.add_ingredient("kr-antimatter-reactor", nuclear_z, 350)
 
-  util.replace_some_ingredient("stone-brick", "stone", 5, "zircon", 5)
+  if util.me.early() then
+    util.replace_some_ingredient("stone-brick", "stone", 5, "zircon", 5)
+  end
   if mods["space-exploration"] then
     util.replace_some_ingredient("se-stone-brick-vulcanite", "stone", 2, "zircon", 2)
   end
