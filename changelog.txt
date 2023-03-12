@@ -2,6 +2,7 @@
 Version: 0.7.0
 Date: 2023-03-13
   Features:
+    - BETA: New explosive rounds magazine item, optional. (Damage values may change)
     - New setting to disable the need for zircon in the early game.
   Changes:
     - Trees should spawn less often on ore

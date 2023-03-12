@@ -11,6 +11,7 @@ See changelog.txt
 
 ### Thanks to
 - [snouz](https://mods.factorio.com/user/snouz) (recolored ore graphics, thumbnail style)
+- Krastorio2 team for magazine icons, and some related code in magazine.lua (Licensed under GNU LGPL v3.0)
 
 ### Compatibility
 - [nihilistzsche](https://github.com/nihilistzsche)

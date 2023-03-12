@@ -16,6 +16,11 @@ function me.early()
   return me.get_setting("bzzirconium-early")
 end
 
+function me.ammo()
+  return me.get_setting("bzzirconium-ammo")
+end
+
+
 function me.use_cermet()
   if me.get_setting("bz-all-intermediates") then return true end
   return me.get_setting("bzzirconium-enable-intermediates") == "yes" or me.cermet_lds()

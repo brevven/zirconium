@@ -30,6 +30,13 @@ data:extend({
     order = "c-a-a",
   },
   {
+    type = "bool-setting",
+		name = "bzzirconium-ammo",
+		setting_type = "startup",
+		default_value = true,
+    order = "d-a-a",
+  },
+  {
 		type = "bool-setting",
 		name = "bzzirconium-enable-sorting",
 		setting_type = "startup",
