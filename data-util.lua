@@ -67,7 +67,7 @@ end
 function util.get_stack_size(default) 
   if mods.Krastorio2 then
     local size = get_setting("kr-stack-size")
-    if size then
+    if size and tonumber(size) then
       return tonumber(size)
     end
   end
@@ -118,6 +118,48 @@ function util.se_landfill(params)
     util.add_unlock("se-recycling-facility", lname)
   end
 end
+
+
+-- k2 matter 
+-- params: {k2matter}, k2baseicon , {icon}
+function util.k2matter(params)
+  local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
+  if mods["space-exploration"] then 
+    params.k2matter.need_stabilizer = true
+  end
+  if not params.k2matter.minimum_conversion_quantity then
+    params.k2matter.minimum_conversion_quantity = 10
+  end
+  data:extend(
+      {
+        {
+          type = "technology",
+          name = params.k2matter.unlocked_by_technology,
+          icons =
+          {
+            {
+              icon = util.k2assets().."/technologies/matter-"..params.k2baseicon..".png",
+              icon_size = 256,
+            },
+            params.icon,
+          },
+          prerequisites = {"kr-matter-processing"},
+          unit =
+          {
+            count = 350,
+            ingredients =
+            {
+              {"production-science-pack", 1},
+              {"utility-science-pack", 1},
+              {"matter-tech-card", 1}
+            },
+            time = 45,
+          }
+        },
+      })
+  matter.createMatterRecipe(params.k2matter)
+end
+
 
 -- se matter
 -- params: ore, energy_required, quant_out, quant_in, icon_size, stream_out
