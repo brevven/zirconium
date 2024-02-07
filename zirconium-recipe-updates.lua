@@ -102,7 +102,7 @@ if mods["space-exploration"] then
   end
   if not mods.bztungsten then
     util.add_ingredient("se-hot-thermodynamics-data", "zirconium-plate", 1)
-    util.add_product("se-hot-thermodynamics-data", {name="zirconium-plate", amount=1, probability=0.50})
+    util.add_product("se-hot-thermodynamics-data", {type="item", name="zirconium-plate", amount=1, probability=0.50})
   end
 
   util.add_ingredient("se-experimental-alloys-data", "zirconium-plate", 1)
