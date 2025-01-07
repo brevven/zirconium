@@ -1,4 +1,3 @@
-require("modules")
 require("zirconium-recipe-updates-lds")
 require("zirconium-recipe-final-stacking")
 require("zirconium-recipe-final-rrr")
