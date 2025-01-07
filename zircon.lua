@@ -49,20 +49,12 @@ data:extend({
         {
           sheet =
           {
-      filename = "__bzzirconium__/graphics/entity/ores/zircon.png",
+      filename = "__bzzirconium__/graphics/entity/ores/hr-zircon.png",
       priority = "extra-high",
-      size = 64,
+      size = 128,
       frame_count = 8,
       variation_count = 8,
-      hr_version =
-      {
-      filename = "__bzzirconium__/graphics/entity/ores/hr-zircon.png",
-        priority = "extra-high",
-        size = 128,
-        frame_count = 8,
-        variation_count = 8,
-        scale = 0.5
-      }
+      scale = 0.5
           }
     },
   },
