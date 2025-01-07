@@ -65,7 +65,7 @@ if util.me.ammo() then
                       {
                         {
                           type = "damage",
-                          damage = {amount = 4, type = "explosion"}
+                          damage = {amount = 5, type = "explosion"}
                         },
                         {
                           type = "create-entity",
