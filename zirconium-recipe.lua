@@ -35,31 +35,31 @@ data:extend({
           main_product = "zirconia",
           enabled = false,
           energy_required = 8,
-          ingredients = {{"zircon", 5}},
+          ingredients = {util.item("zircon", 5)},
           results = mods.bztitanium and util.me.byproduct() and {
             {name="zirconia", amount_min=4, amount_max=5},
             {name="titanium-ore", amount=1, probability=.5}
-          } or {{"zirconia", 5}}
+          } or {util.item("zirconia", 5)}
         } or
         {
           main_product = "zirconia",
           enabled = false,
           energy_required = 3.2,
-          ingredients = {{"zircon", 1}},
+          ingredients = {util.item("zircon", 1)},
           results = mods.bztitanium and util.me.byproduct() and {
             {name="zirconia", amount=2, probability=.95},
             {name="titanium-ore", amount=1, probability=.1}
-          } or {{"zirconia", 2}}
+          } or {util.item("zirconia", 2)}
         }),
     expensive =
     {
       main_product = "zirconia",
       enabled = false,
       energy_required = 3.2,
-      ingredients = {{"zircon", 1}},
+      ingredients = {util.item("zircon", 1)},
       results = mods.bztitanium and util.me.byproduct() and {
-        {"zirconia", 1}, {name="titanium-ore", amount=1, probability=.05}
-        } or {{"zirconia", 2}}
+        util.item("zirconia", 1), {name="titanium-ore", amount=1, probability=.05}
+        } or {util.item("zirconia", 2)}
     }
   },
   {
@@ -89,22 +89,20 @@ data:extend({
         {
           enabled = false,
           energy_required = 8,
-          ingredients = {{"zirconia", 15}},
-          result = "zirconium-plate",
-          result_count = 5,
+          ingredients = {util.item("zirconia", 15)},
+          results = {util.item("zirconium-plate", 5)},
         } or
         {
           enabled = false,
           energy_required = 9.6,
-          ingredients = {{"zirconia", 3}},
-          result = "zirconium-plate",
-          result_count = 1,
+          ingredients = {util.item("zirconia", 3)},
+          results = {util.item("zirconium-plate", 1)},
         }),
     expensive =
     {
       enabled = false,
       energy_required = 9.6,
-      ingredients = {{"zirconia", 6}},
+      ingredients = {util.item("zirconia", 6)},
       result = "zirconium-plate",
     }
   },
@@ -149,16 +147,16 @@ data:extend({
 
 -- cermet only if setting enabled
 if util.me.use_cermet() then
-local cermet_i = {{"zirconia", 2}, {"copper-plate", 1}}
+local cermet_i = {util.item("zirconia", 2), util.item("copper-plate", 1)}
 if mods.bztitanium then
   local tme = require("__bztitanium__.me");
-  table.insert(cermet_i, {tme.titanium_plate, 1})
+  table.insert(cermet_i, util.item(tme.titanium_plate, 1))
 end
 if mods.bzsilicon then
-  table.insert(cermet_i, {"silica", 1})
+  table.insert(cermet_i, util.item("silica", 1))
 end
 if mods.bzaluminum then
-  table.insert(cermet_i, {"alumina", 1})
+  table.insert(cermet_i, util.item("alumina", 1))
 end
 data:extend({
   {
@@ -187,8 +185,7 @@ data:extend({
     enabled = false,
     energy_required = #cermet_i + 1,
     ingredients = cermet_i,
-    result = "cermet",
-    result_count = #cermet_i + 1,
+    results = {util.item("cermet", #cermet_i + 1)},
   },
   {
     type = "technology",
@@ -237,7 +234,7 @@ data:extend({
     },
     enabled = true,
     energy_required = 1,
-    ingredients = {{"stone", 2}},
+    ingredients = {util.item("stone", 2)},
     results = {
       {type="item", name="zircon", amount=1, probability=.999999},
       {type="item", name="stone", amount=1, probability=0.5},
@@ -255,7 +252,7 @@ data:extend({
     },
     enabled = true,
     energy_required = 1,
-    ingredients = {{"zircon", 2}},
+    ingredients = {util.item("zircon", 2)},
     results = {
       {type="item", name="stone", amount=1, probability=.999999},
       {type="item", name="zircon", amount=1, probability=0.5},
@@ -265,7 +262,7 @@ data:extend({
 end
 
 -- Zirconium Tungstate, only if needed
-if mods.bztungsten and (mods["Krastorio2"] or mods["space-exploration"]) then
+if mods["space-age"] or (mods.bztungsten and (mods["Krastorio2"] or mods["space-exploration"])) then
 data:extend({
   {
     type = "item",
@@ -284,9 +281,8 @@ data:extend({
     order = "z[zz]",
     enabled = false,
     energy_required = 2,
-    ingredients = {{"zirconium-plate", 1}, {"tungsten-plate", 1},},
-    result = "zirconium-tungstate",
-    result_count = 2,
+    ingredients = {util.item("zirconium-plate", 1), util.item("tungsten-plate", 1),},
+    results = {util.item("zirconium-tungstate", 2)},
   },
 })
 util.add_effect("zirconia-processing", { type = "unlock-recipe", recipe = "zirconium-tungstate" })
@@ -295,9 +291,9 @@ end
 -- Zircaloy-4 only if needed
 if mods.bztin then
 local zircaloyi = {
-  {"zirconium-plate", 17},
-  {"tin-plate", 2},
-  {"iron-plate", 1},
+  util.item("zirconium-plate", 17),
+  util.item("tin-plate", 2),
+  util.item("iron-plate", 1),
 }
 data:extend({
   {
@@ -316,8 +312,7 @@ data:extend({
     enabled = false,
     energy_required = 60,
     ingredients = zircaloyi,
-    result = "zircaloy-4",
-    result_count = 20,
+    results = {util.item("zircaloy-4", 20)},
   },
 })
 util.add_effect("zirconia-processing", { type = "unlock-recipe", recipe = "zircaloy-4" })
@@ -331,8 +326,8 @@ data:extend({
     category = "double-smelting",
     enabled = false,
     energy_required = 19.2,
-    ingredients = {{"zircon", 3}},
-    results =  {{"zirconium-plate", 2}},
+    ingredients = {util.item("zircon", 3)},
+    results =  {util.item("zirconium-plate", 2)},
   }
 })
 util.add_effect("zirconia-processing", {type = "unlock-recipe", recipe = "double-zirconium"})

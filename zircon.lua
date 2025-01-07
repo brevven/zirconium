@@ -1,7 +1,16 @@
 local resource_autoplace = require('resource-autoplace');
-local noise = require('noise');
 
 local util = require("data-util");
+
+
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["zircon"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["zircon"] = {}
+resource_autoplace.initialize_patch_set("zircon", true)
+
+if mods.tenebris then
+  data.raw.planet.tenebris.map_gen_settings.autoplace_controls["zircon"] = {}
+  data.raw.planet.tenebris.map_gen_settings.autoplace_settings.entity.settings["zircon"] = {}
+end
 
 data:extend({
 	{
@@ -9,11 +18,7 @@ data:extend({
     category = "resource",
     name = "zircon",
     richness = true,
-    order = "b-e"
-	},
-	{
-    type = "noise-layer",
-    name = "zircon"
+    order = "a-z"
 	},
 	{
     type = "resource",
@@ -37,7 +42,7 @@ data:extend({
 
     autoplace = resource_autoplace.resource_autoplace_settings{
       name = "zircon",
-      order = "b-z",
+      order = "a-z",
       base_density = 4,
       has_starting_area_placement = true,
       regular_rq_factor_multiplier = 1.2,
@@ -80,8 +85,12 @@ local richness = data.raw.resource["zircon"].autoplace.richness_expression
 -- Modify zircon autoplace richness: 
 -- After 500 tiles it's standard
 -- Up to 500 tiles, it scales up
-data.raw.resource["zircon"].autoplace.richness_expression = 
-  richness * noise.if_else_chain(
-      noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(500)),
-      (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) + 25)/525,
-      1)
+data.raw.resource["zircon"].autoplace.richness_expression = richness..[[*
+if(distance_from_nearest_point{x = x, y = y, points = starting_positions} < 500,
+   (distance_from_nearest_point{x = x, y = y, points = starting_positions} + 25)/525,
+   1)
+   ]]
+--   richness * noise.if_else_chain(
+--       noise.less_than(noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")), noise.to_noise_expression(500)),
+--       (noise.distance_from(noise.var("x"), noise.var("y"), noise.var("starting_positions")) + 25)/525,
+--       1)

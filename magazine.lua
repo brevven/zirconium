@@ -3,21 +3,21 @@ local util = require("data-util");
 
 if util.me.ammo() then
   local mag = {
-    {"zirconium-plate", 1},
+    util.item("zirconium-plate", 1),
   }
   local ct = 1
   if mods.bztungsten then
-    table.insert(mag, {"tungsten-carbide", 1})
+    table.insert(mag, util.item("tungsten-carbide", 1))
     ct = ct + 1
   end
   -- add any other count-incrementing ingredients before silica, oil, and magazine
   if mods.bzsilicon then
-    table.insert(mag, {"silica", ct})
+    table.insert(mag, util.item("silica", ct))
   end
   table.insert(mag, {type="fluid", name="heavy-oil", amount=ct})
 
   if not mods.Krastorio2 or not util.get_setting("kr-more-realistic-weapon") then
-    table.insert(mag, {"piercing-rounds-magazine", ct})
+    table.insert(mag, util.item("piercing-rounds-magazine", ct))
 
     data:extend({
       {
@@ -25,6 +25,7 @@ if util.me.ammo() then
         name = "explosive-rounds-magazine",
         icon = "__bzzirconium__/graphics/icons/magazine.png",
         icon_size = 64, icon_mipmaps = 4,
+        ammo_category = "bullet",
         ammo_type =
         {
           category = "bullet",
@@ -90,8 +91,7 @@ if util.me.ammo() then
         enabled = false,
         energy_required = 6 * ct,
         ingredients = mag,
-        result = "explosive-rounds-magazine",
-        result_count = ct,
+        results = {util.item("explosive-rounds-magazine", ct)},
       },
     })
 
@@ -104,9 +104,9 @@ if util.me.ammo() then
     end
 
     rmag = futil.table.deepcopy(mag)
-    table.insert(rmag, {"armor-piercing-rifle-magazine", ct})
+    table.insert(rmag, util.item("armor-piercing-rifle-magazine", ct))
     ammag = futil.table.deepcopy(mag)
-    table.insert(ammag, {"armor-piercing-anti-material-rifle-magazine", ct})
+    table.insert(ammag, util.item("armor-piercing-anti-material-rifle-magazine", ct))
 
 
     data:extend({
@@ -220,8 +220,7 @@ if util.me.ammo() then
         energy_required = 2.5*ct,
         enabled = false,
         ingredients = rmag,
-        result = "explosive-rounds-rifle-magazine",
-        result_count = ct,
+        results = {util.item("explosive-rounds-rifle-magazine", ct)},
       },
 
       ------------------------
@@ -330,8 +329,7 @@ if util.me.ammo() then
         energy_required = 6*ct,
         enabled = false,
         ingredients = ammag,
-        result = "explosive-rounds-anti-material-rifle-magazine",
-        result_count = ct,
+        results = {util.item("explosive-rounds-anti-material-rifle-magazine", ct)},
       },
     })
 
