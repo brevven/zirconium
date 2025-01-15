@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2025-01-14
+  Fixes:
+    - Working with Asteroid Mining
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2025-01-14
+  Fixes:
+    - Basic foundry supports hot metals
+    - Prevent a mod load error, improve general mod compatibility
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2025-01-13
+  Changes:
+    - Compatible with 2.0 and Space Age
+    - New zircon item graphics, improved zircon entity graphics
+    - Zirconium smelting takes one more step than in 1.1, but has more forgiving ratios.
+    - Some recipe and tech tree reworks. Cermet no longer used in LDS.
+    - With Space Age, add an inefficient basic foundry for creating simple alloys on Nauvis. It cannnot craft advanced foundry recipes.
+    - Alternative production chains on Vulcanus and Gleba. Uses recyclers on Fulgora....
+---------------------------------------------------------------------------------------------------
 Version: 0.7.3
 Date: 2024-02-07
   Fixes:

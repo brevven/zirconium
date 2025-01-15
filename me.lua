@@ -18,18 +18,14 @@ function me.early()
 end
 
 function me.ammo()
-  return me.get_setting("bzzirconium-ammo")
+  return true
+  -- return me.get_setting("bzzirconium-ammo")
 end
 
 
 function me.use_cermet()
   if me.get_setting("bz-all-intermediates") then return true end
-  return me.get_setting("bzzirconium-enable-intermediates") == "yes" or me.cermet_lds()
-end
-
-function me.cermet_lds()
-  if me.get_setting("bz-all-intermediates") then return true end
-  return me.get_setting("bzzirconium-enable-intermediates") == "lds"
+  return me.get_setting("bzzirconium-enable-intermediates") == "yes"
 end
 
 function me.enable_sorting()

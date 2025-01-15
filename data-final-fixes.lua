@@ -16,3 +16,7 @@ for i, entity in pairs(data.raw.furnace) do
   end
 end
 end
+
+-- Make sure these don't exist, just in case
+util.remove_raw("recipe", "stone-recycling")
+util.remove_raw("recipe", "zircon-recycling")

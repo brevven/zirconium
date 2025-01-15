@@ -18,8 +18,8 @@ data:extend({
 		type = "string-setting",
 		name = "bzzirconium-enable-intermediates",
 		setting_type = "startup",
-		default_value = "lds",
-    allowed_values = {"lds", "yes", "no"},
+		default_value = "no",
+    allowed_values = {"yes", "no"},
     order = "b-a-a",
 	},
   {
@@ -29,18 +29,19 @@ data:extend({
 		default_value = true,
     order = "c-a-a",
   },
-  {
-    type = "bool-setting",
-		name = "bzzirconium-ammo",
-		setting_type = "startup",
-		default_value = true,
-    order = "d-a-a",
-  },
+--  {
+--    type = "bool-setting",
+--		name = "bzzirconium-ammo",
+--		setting_type = "startup",
+--		default_value = true,
+--    order = "d-a-a",
+--  },
+  not mods.quality and
   {
 		type = "bool-setting",
 		name = "bzzirconium-enable-sorting",
 		setting_type = "startup",
 		default_value = false,
     order = "m-a-a",
-	},
+	} or nil,
 })

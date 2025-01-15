@@ -22,12 +22,12 @@ data:extend({
 	},
 	{
     type = "resource",
-    icon_size = 64, icon_mipmaps = 3,
     name = "zircon",
     icon = "__bzzirconium__/graphics/icons/zircon.png",
+    icon_size = 128,
     flags = {"placeable-neutral"},
     order="a-b-a",
-    map_color = {r=0.90, g=0.70, b=0.70},
+    map_color = {235, 141, 172},
     tree_removal_probability = 0.7,
     tree_removal_max_distance = 32 * 32,
     minable =
@@ -66,16 +66,18 @@ data:extend({
   {
       type = "item",
       name = "zircon",
-      icon_size = 64, icon_mipmaps = 3,
+      icon_size = 128,
       icon = "__bzzirconium__/graphics/icons/zircon.png",
       pictures = {
-        {filename="__bzzirconium__/graphics/icons/zircon.png", size=64, scale=0.25},
-        {filename="__bzzirconium__/graphics/icons/zircon-2.png", size=64, scale=0.25},
-        {filename="__bzzirconium__/graphics/icons/zircon-3.png", size=64, scale=0.25},
-        {filename="__bzzirconium__/graphics/icons/zircon-4.png", size=64, scale=0.25},
+        {filename="__bzzirconium__/graphics/icons/zircon.png", size=128, scale=0.25},
+        {filename="__bzzirconium__/graphics/icons/zircon-1.png", size=128, scale=0.25},
+        {filename="__bzzirconium__/graphics/icons/zircon-2.png", size=128, scale=0.25},
+        {filename="__bzzirconium__/graphics/icons/zircon-3.png", size=128, scale=0.25},
+        {filename="__bzzirconium__/graphics/icons/zircon-4.png", size=128, scale=0.25},
       },
       subgroup = "raw-resource",
       order = "t-c-a",
+      weight = 1*kg,
       stack_size = util.get_stack_size(50)
   },
 })

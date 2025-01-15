@@ -7,15 +7,33 @@ if mods.bzfoundry and data.raw.item["foundry"] then
   util.set_to_founding("zircaloy-4")
 end
 
+if mods["space-age"] then
+  util.add_ingredient("foundry", "zirconia", 20)
+end
+
+-- space age
+util.replace_ingredient("metallurgic-science-pack", "tungsten-plate", "zirconium-tungstate")
+util.add_ingredient("cryogenic-plant", "zirconium-tungstate", 20)
+
+if mods["space-age"] and mods.bztin then
+  util.copy_recipe("bronze-plate", "bronze-plate-basic")
+  util.set_category("bronze-plate-basic", "basic-metallurgy")
+  util.set_localised_name("bronze-plate-basic", {"item-name.bronze-plate"})
+  util.add_unlock("advanced-material-processing-2", "bronze-plate-basic")
+  util.multiply_ingredients("bronze-plate", 2)
+end
+
 
 if util.me.early() then
   util.replace_some_ingredient("stone-furnace", "stone", 1, "zircon", 1)
 end
 if not mods["Krastorio2"] then
-  if util.me.early() then
-    util.replace_some_ingredient("steel-furnace", "stone-brick", 4, "zircon", 6)
+  util.replace_some_ingredient("steel-furnace", "stone-brick", 4, "zirconia", 6)
+  if mods.bzsilicon then -- this uses enough stone, we can just replace
+    util.replace_ingredient("electric-furnace", "stone-brick", "zirconia")
+  else
+    util.replace_some_ingredient("electric-furnace", "stone-brick", 5, "zirconia", 5)
   end
-  util.replace_some_ingredient("electric-furnace", "stone-brick", 5, "zirconia", 5)
 end
 
 util.replace_ingredient("concrete", "iron-ore", "zircon")
@@ -23,8 +41,11 @@ if mods["aai-industry"] then
   util.add_ingredient("concrete", "zircon", 1)
 end
 
-util.multiply_recipe("explosives", 2)
+-- Zirconium in explosives
 util.add_ingredient("explosives", "zirconium-plate", 1)
+util.set_recipe_time("explosives", 6)
+util.set_product_amount("explosives", "explosives", 3)
+
 util.add_ingredient("nuclear-reactor", nuclear_z, 100)
 
 local ufc_amt = mods["Krastorio2"] and 1 or 5
@@ -44,8 +65,10 @@ if util.me.use_cermet() then
   util.add_ingredient("rocket-control-unit", "cermet", 1)
   util.add_ingredient("speed-module-3", "cermet", 1)
   util.add_ingredient("productivity-module-3", "cermet", 1)
-  util.add_ingredient("effectivity-module-3", "cermet", 1)
+  util.add_ingredient("efficiency-module-3", "cermet", 1)
+  util.add_ingredient("quality-module-3", "cermet", 1)
   util.add_ingredient("beacon", "cermet", 10)
+  util.add_ingredient("electromagnetic-plant", "cermet", 50)
   util.add_ingredient("spidertron", "cermet", 8)
   if not util.fe_plus("Machines") then
     util.add_ingredient("assembling-machine-3", "cermet", 2)
@@ -184,6 +207,18 @@ util.add_ingredient("rfp-particle-decelerator", "zirconium-plate", 1000)
 util.replace_some_ingredient("rfp-matter-antimatter-fuel-cell-empty", "steel-plate", 10, nuclear_z, 10)
 
 
+-- Transplutonic
+util.add_ingredient("pu238-fuel", nuclear_z, 5)
+util.add_ingredient("np237-fuel", nuclear_z, 5)
+util.add_ingredient("plutonium-mix-fuel", nuclear_z, 5)
+util.add_ingredient("neptunium-mix-fuel", nuclear_z, 5)
+util.add_ingredient("uranium-mix-fuel", nuclear_z, 5)
+util.add_ingredient("plutonium-inv-dead", nuclear_z, 5)
+util.add_ingredient("neptunium-inv-dead", nuclear_z, 5)
+util.add_ingredient("uranium-inv-dead", nuclear_z, 5)
+util.add_ingredient("castorempty", nuclear_z, 50)
+util.add_ingredient("breeder-reactor", nuclear_z, 250)
+util.add_ingredient("particle-accelerator", nuclear_z, 250)
 
 
 

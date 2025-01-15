@@ -1,6 +1,6 @@
 {
     "name": "bzzirconium",
-    "version": "2.0.0",
+    "version": "2.0.2",
     "factorio_version": "2.0",
     "title": "Zirconium",
     "author": "Brevven",
@@ -20,6 +20,6 @@
       "? bztitanium >= 0.12.4",
       "? bztungsten >= 0.5.0"
     ],
-    "description": "Adds zircon, zirconia, zirconium, and cermet to the base game.\n\nCompatible with Space Age and more. A standalone piece of BZ Mods."
+    "description": "Adds zircon, zirconia, zirconium, and more to the base game.\n\nCompatible with Space Age and many other mods. A standalone piece of BZ Mods."
 }
 

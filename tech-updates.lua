@@ -1,9 +1,10 @@
 local util = require("__bzzirconium__.data-util");
 
-util.add_prerequisite("advanced-material-processing-2", "zirconia-processing")
+util.add_prerequisite("advanced-material-processing", "zirconia-processing")
 util.add_prerequisite("low-density-structure", "zirconia-processing")
-util.add_prerequisite("nuclear-power", "zirconia-processing")
-util.add_prerequisite("explosives", "zirconia-processing")
+util.set_prerequisite("explosives", {"zirconium-processing"})
+util.add_prerequisite("military-3", "zirconium-processing")
+util.add_prerequisite("nuclear-power", "zirconium-processing")
 
 -- Nixie tubes
 util.add_prerequisite("cathodes", "zirconia-processing")

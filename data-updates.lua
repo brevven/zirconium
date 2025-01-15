@@ -1,5 +1,6 @@
 require("tech-updates")
 require("zirconium-recipe-updates")
+require("zirconium-asteroid-updates")
 require("zircon-matter")
 require("map-gen-preset-updates")
 require("omni")
@@ -10,10 +11,14 @@ require("compatibility/crafting-efficiency")
 
 local util = require("data-util");
 
-if mods.Asteroid_Mining then
-  require("__Asteroid_Mining__.scripts.addmodule")
-  if not data.raw.item["asteroid-zircon"] then
-    -- For Zirconium we only add if it's not already added by Asteroid_Mining
-    amfunc.addtype("zircon", {a = 0,r = 110, g = 40, b =70})
-  end
+if mods.Asteroid_Mining and not data.raw.item["asteroid-zircon"] then
+  util.addtype("zircon", {a = 0,r = 110, g = 40, b =70})
+end
+
+if mods["any-planet-start"] then
+  util.set_tech_recipe("zirconia-processing", {
+    {"automation-science-pack", 1},
+    {"logistic-science-pack", 1},
+  })
+  util.set_prerequisite("zirconia-processing", {"logistic-science-pack"})
 end

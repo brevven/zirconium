@@ -2,7 +2,7 @@
 
 local util = require("__bzzirconium__.data-util");
 
-if deadlock then
+if deadlock and deadlock["add_stack"] then
   deadlock.add_stack("zircon",  "__bzzirconium__/graphics/icons/stacked/zircon-stacked.png", "deadlock-stacking-1", 64)
   deadlock.add_stack("zirconia",  "__bzzirconium__/graphics/icons/stacked/zirconia-stacked.png", "deadlock-stacking-2", 128)
   deadlock.add_stack("zirconium-plate", "__bzzirconium__/graphics/icons/stacked/zirconium-plate-stacked.png" , "deadlock-stacking-2", 128)
