@@ -6,6 +6,7 @@ require("map-gen-preset-updates")
 require("omni")
 require("strange-matter")
 require("zircon-rocks")
+require("zirconium-recipe-updates-lds")
 require("compatibility/crafting-efficiency")
 
 
@@ -22,3 +23,4 @@ if mods["any-planet-start"] then
   })
   util.set_prerequisite("zirconia-processing", {"logistic-science-pack"})
 end
+util.redo_recycling()

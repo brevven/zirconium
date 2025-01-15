@@ -87,6 +87,7 @@ data:extend({
     order = "z[zirconia]",
     energy_required = 1.6,
     enabled = false,
+    auto_recycle = false,
     ingredients = {util.item("zirconia", 1), util.fluid("sulfuric-acid", 5)},
     results = {util.item("zirconium-sponge", 1)},
   },
@@ -106,6 +107,7 @@ data:extend({
     category = "smelting",
     allow_productivity = true,
     subgroup = "raw-material",
+    auto_recycle = false,
     order = "d[zirconium-plate]",
     icons = (mods["Krastorio2"] and
         {
@@ -217,6 +219,7 @@ data:extend({
     category = "crafting",
     subgroup = "intermediate-product",
     allow_productivity = true,
+    auto_recycle = false,
     order = "z[zirconia]",
     icons = { { icon = "__bzzirconium__/graphics/icons/cermet.png", icon_size = 128,  } },
     enabled = false,
@@ -450,6 +453,7 @@ data:extend({
     name = "zircaloy-4",
     category = mods["space-age"] and "basic-metallurgy" or "advanced-crafting",
     allow_productivity = true,
+    auto_recycle = false,
     order = "z[zz]",
     enabled = false,
     energy_required = 60,
