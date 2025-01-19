@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2025-01-19
+  Changes:
+    - Space Age: Changes to Vulcanus production chains:
+      Most recipes made from lava now have a byproduct of both stone and zircon. So, recyclers
+      are no longer required for full automation, but will help with balancing once available.
+      LDS casting now requires zirconia.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2025-01-15
   Fixes:

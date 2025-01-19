@@ -6,7 +6,6 @@ require("map-gen-preset-updates")
 require("omni")
 require("strange-matter")
 require("zircon-rocks")
-require("zirconium-recipe-updates-lds")
 require("compatibility/crafting-efficiency")
 
 
