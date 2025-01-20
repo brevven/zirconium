@@ -22,7 +22,6 @@ function me.ammo()
   -- return me.get_setting("bzzirconium-ammo")
 end
 
-
 function me.use_cermet()
   if me.get_setting("bz-all-intermediates") then return true end
   return me.get_setting("bzzirconium-enable-intermediates") == "yes"
@@ -30,6 +29,14 @@ end
 
 function me.enable_sorting()
   return me.get_setting("bzzirconium-enable-sorting")
+end
+
+function me.basic_foundry()
+  if me.get_setting("bzzirconium-basic-foundry") == nil then
+    return true
+  else
+    return me.get_setting("bzzirconium-basic-foundry")
+  end
 end
 
 function me.get_setting(name)

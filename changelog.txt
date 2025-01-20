@@ -6,6 +6,8 @@ Date: 2025-01-19
       Most recipes made from lava now have a byproduct of both stone and zircon. So, recyclers
       are no longer required for full automation, but will help with balancing once available.
       LDS casting now requires zirconia.
+    - Space Age & Wooden Industry: With kilns available, basic foundry is disabled by default, but
+      there's an option to keep it available.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2025-01-15

@@ -15,13 +15,17 @@ end
 util.replace_ingredient("metallurgic-science-pack", "tungsten-plate", "zirconium-tungstate")
 util.add_ingredient("cryogenic-plant", "zirconium-tungstate", 20)
 
-if mods["space-age"] and mods.bztin then
+if mods["space-age"] and mods.bztin and util.me.basic_foundry() then
   util.copy_recipe("bronze-plate", "bronze-plate-basic")
   util.set_category("bronze-plate-basic", "basic-metallurgy")
   util.set_localised_name("bronze-plate-basic", {"item-name.bronze-plate"})
   util.add_unlock("advanced-material-processing-2", "bronze-plate-basic")
   util.multiply_ingredients("bronze-plate", 2)
 end
+
+-- Wooden Industry kilns
+util.add_crafting_category("assembling-machine", "brick-kiln", "basic-metallurgy")
+util.add_crafting_category("assembling-machine", "electric-kiln", "basic-metallurgy")
 
 
 if util.me.early() then

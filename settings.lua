@@ -45,3 +45,15 @@ data:extend({
     order = "m-a-a",
 	} or nil,
 })
+
+if mods["wood-industry"] then
+data:extend({
+  {
+    type = "bool-setting",
+		name = "bzzirconium-basic-foundry",
+		setting_type = "startup",
+		default_value = false,
+    order = "k-a-a",
+  },
+})
+end

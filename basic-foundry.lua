@@ -5,7 +5,9 @@ local sounds = require("__base__.prototypes.entity.sounds")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
 if mods["space-age"] then
-if not data.raw.item["basic-foundry"] then
+util.add_new_crafting_category("basic-metallurgy")
+
+if util.me.basic_foundry() and not data.raw.item["basic-foundry"] then
 local graphics_set = require("__space-age__.prototypes.entity.foundry-pictures").graphics_set
 graphics_set.animation.layers[1].tint = {.6, .8, .8}
 data:extend({
@@ -140,10 +142,9 @@ data:extend({
     results = {util.item("steel-plate", 1)},
   },
 })
-end
-util.add_new_crafting_category("basic-metallurgy")
-util.add_crafting_category("assembling-machine", "foundry", "basic-metallurgy")
-util.add_unlock("advanced-material-processing-2", "steel-basic")
 util.add_unlock("advanced-material-processing-2", "basic-foundry")
+util.add_unlock("advanced-material-processing-2", "steel-basic")
+end
 util.add_prerequisite("nuclear-power", "advanced-material-processing-2")
+util.add_crafting_category("assembling-machine", "foundry", "basic-metallurgy")
 end
