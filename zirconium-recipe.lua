@@ -303,6 +303,10 @@ data:extend({
 })
 util.add_unlock("recycling", "sort-zircon-stone")
 util.add_unlock("recycling", "sort-stone-zircon")
+if mods.lignumis then
+  util.set_enabled("sort-zircon-stone", true)
+  util.set_enabled("sort-stone-zircon", true)
+end
 end
 
 if mods["space-age"] then
