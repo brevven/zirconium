@@ -1,7 +1,7 @@
 local me = {}
 
 me.name = "bzzirconium"
-me.resources = {"zircon"}
+me.resources = {{"zircon", "nauvis"}}
 me.recipes = {"zirconium-plate", "zirconia", "cermet",
            "enriched-zirconia-smelting",
            "enriched-zircon",

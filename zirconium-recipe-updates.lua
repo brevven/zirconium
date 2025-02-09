@@ -26,6 +26,7 @@ end
 -- Wooden Industry kilns
 util.add_crafting_category("assembling-machine", "brick-kiln", "basic-metallurgy")
 util.add_crafting_category("assembling-machine", "electric-kiln", "basic-metallurgy")
+util.set_category("cermet", "kiln-smelting")
 
 
 if util.me.early() then

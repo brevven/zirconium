@@ -3,6 +3,7 @@ local util = require("__bzzirconium__.data-util");
 
 if mods["space-exploration"] then
   se_delivery_cannon_recipes["zircon"] = {name= "zircon"}
+  se_delivery_cannon_recipes["zircaloy-4"] = {name= "zircaloy-4"}
   se_delivery_cannon_recipes["zirconia"] = {name= "zirconia"}
   se_delivery_cannon_recipes["zirconium-plate"] = {name= "zirconium-plate"}
   util.se_landfill({ore="zircon"})

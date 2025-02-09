@@ -1,6 +1,14 @@
 ---------------------------------------------------------------------------------------------------
-Version: 2.1.2
+Version: 2.1.3
 Date: 2025-02-01
+  Fixes:
+    - Fix /bz-regenerate command
+  Changes:
+    - With Wooden Industry, cermet can be made in kiln
+    - Other minor compatibility changes
+---------------------------------------------------------------------------------------------------
+Version: 2.1.2
+Date: 2025-01-31
   Changes:
     - Add shiftite recipe for Janus mod
 ---------------------------------------------------------------------------------------------------
