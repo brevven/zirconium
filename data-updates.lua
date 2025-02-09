@@ -23,3 +23,5 @@ if mods["any-planet-start"] then
   util.set_prerequisite("zirconia-processing", {"logistic-science-pack"})
 end
 util.redo_recycling()
+
+util.add_shiftite_recipe("zirconia", {"gamma"}, 1)
