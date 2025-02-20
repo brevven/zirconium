@@ -328,6 +328,7 @@ data:extend({
       { icon = "__bzzirconium__/graphics/icons/zircon.png", icon_size=128},
       { icon = "__bzzirconium__/graphics/icons/zirconium-sponge.png", icon_size=128, scale=0.25, shift={-8,-8}},
     },
+    enabled = false,
     energy_required = 10,
     allow_decomposition = false,
     ingredients = {
@@ -347,6 +348,7 @@ data:extend({
       { icon = "__bzzirconium__/graphics/icons/zirconia.png", icon_size=128},
       { icon = "__space-age__/graphics/icons/pentapod-egg.png", icon_size=64, scale=0.25, shift={-4,-4}},
     },
+    enabled = false,
     energy_required = 6,
     allow_decomposition = false,
     ingredients = {
