@@ -65,6 +65,9 @@ end
 util.add_ingredient("rocket-engine-nozzle", "zirconia", 1)
 util.add_to_product("rocket-engine-nozzle", "rocket-engine-nozzle", 1)
 util.add_time("rocket-engine-nozzle", 5)
+util.add_ingredient("rocket-engine-nozzle-basic", "zirconia", 1)
+util.add_to_product("rocket-engine-nozzle-basic", "rocket-engine-nozzle", 1)
+util.add_time("rocket-engine-nozzle-basic", 5)
 
 if util.me.use_cermet() then
   util.add_ingredient("rocket-control-unit", "cermet", 1)
