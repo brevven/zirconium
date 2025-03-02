@@ -167,7 +167,9 @@ util.replace_ingredient("empty-fuel-cell-recipe", "iron-plate", nuclear_z)
 
 util.replace_some_ingredient("breeder-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
 util.replace_some_ingredient("mox-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
+util.replace_some_ingredient("MOX-fuel-cell", nuclear_plate, 5, nuclear_z, 5) 
 util.replace_some_ingredient("MOX-fuel", nuclear_plate, 5, nuclear_z, 5) 
+util.replace_some_ingredient("mox-fuel", nuclear_plate, 5, nuclear_z, 5) 
 util.add_ingredient("advanced-electric-furnace-rampant-industry", "zirconia", 50)
 
 -- MadClown's Nuclear
