@@ -12,6 +12,30 @@ util.get_setting = util.me.get_setting
 util.titanium_plate = ""
 util.titanium_processing = ""
 
+local item_sounds_helper = [[
+local item_sounds = require('__base__.prototypes.item_sounds')
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
+
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
+
+    inventory_move_sound = item_sounds.brick_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+]]
+
 util.A = {{"automation-science-pack", 1}}
 util.AL = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}}
 util.ALC = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
@@ -157,6 +181,7 @@ function util.add_shiftite_recipe(item, shiftites, quantity)
 end
 
 -- Add the gleba rock. If it exists, still add resource to mine from it
+local gleba_tint = {.6, .8, 1}
 function util.add_gleba_rock(resource, amount_min, amount_max)
   if (not data.raw.planet.gleba or
       not data.raw.planet.gleba.map_gen_settings or -- attempted compatibility fixes
@@ -176,7 +201,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
       name = "gleba-rock",
       localised_name = {"entity-name.big-rock"},
       flags = {"placeable-neutral", "placeable-off-grid"},
-      icon = "__base__/graphics/icons/big-sand-rock.png",
+      icons = {{icon = "__base__/graphics/icons/big-sand-rock.png", tint=gleba_tint}},
       subgroup = "grass",
       order = "b[decorative]-l[rock]-a[big]",
       deconstruction_alternative = "big-rock",
@@ -227,6 +252,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
       {
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-01.png",
+          tint = gleba_tint,
           width = 209,
           height = 138,
           shift = {0.304688, -0.4},
@@ -234,6 +260,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-02.png",
+          tint = gleba_tint,
           width = 165,
           height = 129,
           shift = {0.0, 0.0390625},
@@ -241,6 +268,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-03.png",
+          tint = gleba_tint,
           width = 151,
           height = 139,
           shift = {0.151562, 0.0},
@@ -248,6 +276,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-04.png",
+          tint = gleba_tint,
           width = 216,
           height = 110,
           shift = {0.390625, 0.0},
@@ -255,6 +284,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-05.png",
+          tint = gleba_tint,
           width = 154,
           height = 147,
           shift = {0.328125, 0.0703125},
@@ -262,6 +292,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-06.png",
+          tint = gleba_tint,
           width = 154,
           height = 132,
           shift = {0.16875, -0.1},
@@ -269,6 +300,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-07.png",
+          tint = gleba_tint,
           width = 193,
           height = 130,
           shift = {0.3, -0.2},
@@ -276,6 +308,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-08.png",
+          tint = gleba_tint,
           width = 136,
           height = 117,
           shift = {0.0, 0.0},
@@ -283,6 +316,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-09.png",
+          tint = gleba_tint,
           width = 157,
           height = 115,
           shift = {0.1, 0.0},
@@ -290,6 +324,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-10.png",
+          tint = gleba_tint,
           width = 198,
           height = 153,
           shift = {0.325, -0.1},
@@ -297,6 +332,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-11.png",
+          tint = gleba_tint,
           width = 190,
           height = 115,
           shift = {0.453125, 0.0},
@@ -304,6 +340,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-12.png",
+          tint = gleba_tint,
           width = 229,
           height = 126,
           shift = {0.539062, -0.015625},
@@ -311,6 +348,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-13.png",
+          tint = gleba_tint,
           width = 151,
           height = 125,
           shift = {0.0703125, 0.179688},
@@ -318,6 +356,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-14.png",
+          tint = gleba_tint,
           width = 137,
           height = 117,
           shift = {0.160938, 0.0},
@@ -325,6 +364,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-15.png",
+          tint = gleba_tint,
           width = 201,
           height = 141,
           shift = {0.242188, -0.195312},
@@ -332,6 +372,7 @@ function util.add_gleba_rock(resource, amount_min, amount_max)
         },
         {
           filename = "__base__/graphics/decorative/sand-rock/big-sand-rock-16.png",
+          tint = gleba_tint,
           width = 209,
           height = 154,
           shift = {0.351562, -0.1},
@@ -1672,16 +1713,17 @@ end
 function util.remove_prior_unlocks(tech, recipe)
   if data.raw.technology[tech].prerequisites then
     for i, prerequisite in pairs(data.raw.technology[tech].prerequisites) do
-      remove_prior_unlocks(prerequisite, recipe, 0)
+      remove_prior_unlocks(prerequisite, recipe, {})
     end
   end
 end
 
-function remove_prior_unlocks(tech, recipe, depth)
-  if depth > 10000 then
-    log("Infinite recursion detected, backing out.")
+function remove_prior_unlocks(tech, recipe, processed)
+  if processed[tech] then
+    print("Already processed ".. tech .. " returning")
     return
   end
+  processed[tech] = true
   local technology = data.raw.technology[tech]
   if technology then
     log("Removing prior unlocks for ".. tech)
@@ -1690,7 +1732,7 @@ function remove_prior_unlocks(tech, recipe, depth)
       for i, prerequisite in pairs(technology.prerequisites) do
         if string.sub(prerequisite, 1, 3) ~= 'ei_' then
           -- log("BZZZ removing prior unlocks for " .. recipe .. " from " .. tech ..", checking " .. prerequisite) -- Handy Debug :|
-          remove_prior_unlocks(prerequisite, recipe, depth+1)
+          remove_prior_unlocks(prerequisite, recipe, processed)
         end
       end
     end
@@ -1714,16 +1756,17 @@ function util.replace_ingredients_prior_to(tech, old, new, multiplier)
   end
   if data.raw.technology[tech].prerequisites then
     for i, prerequisite in pairs(data.raw.technology[tech].prerequisites) do
-      replace_ingredients_prior_to(prerequisite, old, new, multiplier, 0)
+      replace_ingredients_prior_to(prerequisite, old, new, multiplier, {})
     end
   end
 end
 
-function replace_ingredients_prior_to(tech, old, new, multiplier, depth)
-  if depth > 10000 then
-    log("Infinite recursion detected, backing out.")
+function replace_ingredients_prior_to(tech, old, new, multiplier, processed)
+  if processed[tech] then
+    print("Already processed ".. tech .. " returning")
     return
   end
+  processed[tech] = true
   log("Replacing for tech "..tech)
   local technology = data.raw.technology[tech]
   if technology then
@@ -1739,7 +1782,7 @@ function replace_ingredients_prior_to(tech, old, new, multiplier, depth)
       for i, prerequisite in pairs(technology.prerequisites) do
         -- log("BZZZ checking " .. prerequisite) -- Handy Debug :|
         if string.sub(prerequisite, 1, 3) ~= 'ei_' then
-          replace_ingredients_prior_to(prerequisite, old, new, multiplier, depth + 1)
+          replace_ingredients_prior_to(prerequisite, old, new, multiplier, processed)
         end
       end
     end
@@ -1820,11 +1863,7 @@ end
 
 -- Save recycling metadata that is later removed by quality mod. Call near end of data.lua
 function util.prepare_recycling_helper()
-  if mods.quality then
-    for _, recipe in pairs(data.raw.recipe) do
-      recipe.auto_recycle_helper = recipe.auto_recycle
-    end
-  end
+  -- DEPRECATED
 end
 
 -- Recalculate recycling recipes, call near end of data-updates.lua, after calling
@@ -1833,7 +1872,6 @@ function util.redo_recycling()
   if mods.quality then
     local recycling = require("__quality__.prototypes.recycling")
     for _, recipe in pairs(data.raw.recipe) do
-      recipe.auto_recycle = recipe.auto_recycle_helper -- keeping this outside conditional to improve fidelity across multiple mods
       if recipe.redo_recycling then
         recycling.generate_recycling_recipe(recipe)
       end

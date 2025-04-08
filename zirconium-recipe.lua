@@ -1,10 +1,7 @@
 -- Zirconium smelting, etc
 
 local util = require("data-util");
-
--- data:extend({
---   
--- })
+local item_sounds = require('__base__.prototypes.item_sounds')
 
 data:extend({
   {
@@ -12,6 +9,9 @@ data:extend({
     name = "zirconia",
     icon = "__bzzirconium__/graphics/icons/zirconia.png",
     icon_size = 128,
+    inventory_move_sound = item_sounds.brick_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
     subgroup = "raw-material",
     order = "z[zirconia]",
     weight = 1*kg,
@@ -72,6 +72,9 @@ data:extend({
       {filename = "__bzzirconium__/graphics/icons/zirconium-sponge-1.png", size=128, scale=0.25},
       {filename = "__bzzirconium__/graphics/icons/zirconium-sponge-2.png", size=128, scale=0.25},
     },
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
     subgroup = "raw-material",
     order = "z[zirconia]",
     weight = 1*kg,
@@ -98,6 +101,9 @@ data:extend({
     icon_size = 128,
     subgroup = "raw-material",
     order = "d[zirconium-plate]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     weight = 1*kg,
     stack_size = util.get_stack_size(100)
   },
@@ -208,6 +214,9 @@ data:extend({
       {filename = "__bzzirconium__/graphics/icons/cermet-3.png", size=128, scale=0.125},
       {filename = "__bzzirconium__/graphics/icons/cermet-4.png", size=128, scale=0.125},
     },
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
     subgroup = "intermediate-product",
     order = "z[cermet]",
     weight = 0.5*kg,
@@ -411,6 +420,9 @@ data:extend({
     name = "zirconium-tungstate",
     icons = {{icon = "__bzzirconium__/graphics/icons/zircon-powder.png",
               icon_size = 64, tint = {a=1, r=.95, g=.75, b=0}}},
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
     subgroup = "intermediate-product",
     order = "z[zz]",
     weight = 2*kg,
@@ -449,6 +461,9 @@ data:extend({
     type = "item",
     name = "zircaloy-4",
     icons = {{icon = "__bzzirconium__/graphics/icons/zircaloy-4.png", icon_size = 128}},
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     subgroup = "intermediate-product",
     order = "z[zz]",
     weight = 5*kg,

@@ -114,6 +114,9 @@ if util.me.ammo() then
         type = "ammo",
         name = "explosive-rounds-rifle-magazine",
         icon = "__bzzirconium__/graphics/icons/r-magazine.png",
+        inventory_move_sound = item_sounds.ammo_small_inventory_move,
+        pick_sound = item_sounds.ammo_small_inventory_pickup,
+        drop_sound = item_sounds.ammo_small_inventory_move,
         icon_size = 64,
         icon_mipmaps = 4,
         ammo_type = {

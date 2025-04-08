@@ -1,5 +1,5 @@
 local resource_autoplace = require('resource-autoplace');
-
+local item_sounds = require('__base__.prototypes.item_sounds')
 local util = require("data-util");
 
 
@@ -75,6 +75,9 @@ data:extend({
         {filename="__bzzirconium__/graphics/icons/zircon-3.png", size=128, scale=0.25},
         {filename="__bzzirconium__/graphics/icons/zircon-4.png", size=128, scale=0.25},
       },
+      inventory_move_sound = item_sounds.resource_inventory_move,
+      pick_sound = item_sounds.resource_inventory_pickup,
+      drop_sound = item_sounds.resource_inventory_move,
       subgroup = "raw-resource",
       order = "t-c-a",
       weight = 1*kg,

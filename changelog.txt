@@ -1,8 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.7
-Date: 2025-03-03
+Date: 2025-03-22
   Changes:
-    - Compatibility tweaks for Tungsten mod
+    - Set inventory sounds for some items
+    - Minor compatibility tweaks
+  Fixes:
+    - Loads with Crafting Efficiency mod
+    - Improved compatibility with muluna
     - Other incidental fixes
 ---------------------------------------------------------------------------------------------------
 Version: 2.1.6
