@@ -36,4 +36,5 @@ if mods["space-age"] then
     },
   })
   util.add_unlock("advanced-asteroid-processing", "advanced-oxide-asteroid-crushing-zirc")
+  util.add_to_productivity_research("asteroid-productivity", "advanced-oxide-asteroid-crushing-zirc")
 end
