@@ -41,7 +41,12 @@ if not mods["Krastorio2"] then
   end
 end
 
-util.replace_ingredient("concrete", "iron-ore", "zircon")
+if mods["Cerys-Moon-of-Fulgora"] then
+  util.replace_ingredient("concrete", "iron-ore", "zircon", 10)
+else
+  util.replace_ingredient("concrete", "iron-ore", "zircon")
+end
+
 if mods["aai-industry"] then
   util.add_ingredient("concrete", "zircon", 1)
 end

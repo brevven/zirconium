@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.9
+Date: 2025-04-20
+  Changes:
+    - When Cerys mod is enabled, concrete recycles into (and requires) more zircon
+    - Any Planet Start on Vulcanus, tweak tech tree a bit.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.8
 Date: 2025-04-08
   Changes:

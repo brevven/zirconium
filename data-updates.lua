@@ -15,11 +15,18 @@ if mods.Asteroid_Mining and not data.raw.item["asteroid-zircon"] then
 end
 
 if mods["any-planet-start"] then
-  util.set_tech_recipe("zirconia-processing", {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-  })
-  util.set_prerequisite("zirconia-processing", {"logistic-science-pack"})
+  if util.me.get_setting("aps-planet") == "vulcanus" then
+    util.set_tech_trigger("zirconia-processing", {type="craft-item", item="stone-furnace"})
+    util.add_unlock("zirconia-processing", "zirconium-sponge")
+    util.remove_recipe_effect("zirconium-processing", "zirconium-sponge")
+    util.add_prerequisite("foundry", "zirconia-processing")
+  else
+    util.set_tech_recipe("zirconia-processing", {
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+    })
+    util.set_prerequisite("zirconia-processing", {"logistic-science-pack"})
+  end
 end
 util.redo_recycling()
 
