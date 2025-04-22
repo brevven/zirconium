@@ -117,10 +117,8 @@ end
 
 function util.get_stack_size(default) 
   if mods.Krastorio2 then
-    local size = get_setting("kr-stack-size")
-    if size and tonumber(size) then
-      return tonumber(size)
-    end
+    -- no more stacksize setting in K2
+    return 200
   end
   return default
 end
@@ -566,6 +564,7 @@ function util.k2matter(params, only_deconversion)
               },
               time = 45,
             },
+            effects = {}
             -- (ignore for now) localised_name = {"technology-name.k2-conversion", {"item-name."..params.k2matter.item_name}},
           },
         })
