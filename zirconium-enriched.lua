@@ -40,7 +40,7 @@ data:extend({
     results =
     { 
       {type = "item",  name = "enriched-zircon", amount = 6},
-      {type = "fluid", name = "dirty-water", amount = 25, ignored_by_stats=25, ignored_by_productivity=25},
+      {type = "fluid", name = "kr-dirty-water", amount = 25, ignored_by_stats=25, ignored_by_productivity=25},
       (mods.bztitanium and util.me.byproduct()) and {type = "item",  name = "titanium-ore", amount = 1} or nil,
     },
     crafting_machine_tint =
@@ -68,26 +68,25 @@ data:extend({
       allow_productivity = true,
       ingredients = 
       {
-        {"enriched-zircon", 5}
+        { type = "item", name = "enriched-zircon", amount = 5}
       },
-      result = "zirconia",
-      result_count = 10,
+      results = { { type = "item", name = "zirconia", amount = 10 } },
       order = "z[zirconia]-z[enriched-zirconia]"
   },	
 	{
 		type = "recipe",
 		name = "dirty-water-filtration-zircon",
-		category = "fluid-filtration",
+		category = "kr-fluid-filtration",
 		icons =
 		{
 			{
-				icon = data.raw.fluid["dirty-water"].icon,
-				icon_size = data.raw.fluid["dirty-water"].icon_size
+				icon = data.raw.fluid["kr-dirty-water"].icon,
+				icon_size = data.raw.fluid["kr-dirty-water"].icon_size
 			},
 			{
 				icon = data.raw.item["zircon"].icon,
 				icon_size =	data.raw.item["zircon"].icon_size,
-				scale = 0.20 * (data.raw.fluid["dirty-water"].icon_size/data.raw.item["zircon"].icon_size),
+				scale = 0.2 * 64 / (data.raw.item["zircon"].icon_size or 64),
 				shift = {0, 4}
 			}
 		},
@@ -99,7 +98,7 @@ data:extend({
 		always_show_products = true,
 		ingredients =
 		{
-			{type = "fluid", name = "dirty-water", amount = 100, ignored_by_stats=100, ignored_by_productivity=100},
+			{type = "fluid", name = "kr-dirty-water", amount = 100, ignored_by_stats=100, ignored_by_productivity=100},
 		},
 		results =
 		{
