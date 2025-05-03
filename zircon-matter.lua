@@ -6,7 +6,8 @@ if mods["Krastorio2"] then
     k2matter = {
       material = {
         name = "zircon",
-        type = "item"
+        type = "item",
+        amount = 10,
       },
       matter_count = 6,
       energy_required = 1,
@@ -27,6 +28,7 @@ if mods["Krastorio2"] then
       matter_count = 10,
       energy_required = 2,
       needs_stabilizer = true,
+      only_deconversion = true,
       unlocked_by = "zirconium-matter-processing",
     },
   }, true)
@@ -36,12 +38,14 @@ if mods["Krastorio2"] then
       material = {
         name = "zirconium-plate",
         type = "item",
+        amount = 10,
       },
       matter_count = 17,
       energy_required = 2,
       needs_stabilizer = true,
+      only_deconversion = true,
       unlocked_by = "zirconium-matter-processing",
     },
-  }, true)
+  })
 
 end

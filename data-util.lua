@@ -115,12 +115,9 @@ function util.fe_plus(sub)
   end
 end
 
-function util.get_stack_size(default) 
-  if mods.Krastorio2 then
-    local size = get_setting("kr-stack-size")
-    if size and tonumber(size) then
-      return tonumber(size)
-    end
+function util.get_stack_size(default)
+  if mods.Krastorio2 and kr_adjust_stack_sizes then
+    return tonumber(200)
   end
   return default
 end
@@ -514,13 +511,10 @@ end
 
 -- k2 matter 
 -- params: {k2matter}, k2baseicon , {icon}
-function util.k2matter(params, only_deconversion)
+function util.k2matter(params)
   local matter = require("__Krastorio2__/prototypes/libraries/matter")
   if mods["space-exploration"] then 
     params.k2matter.needs_stabilizer = true
-  end
-  if not params.k2matter.material.amount then
-    params.k2matter.material.amount = 10
   end
   if not data.raw.technology[params.k2matter.unlocked_by] then
     local icon = ""
@@ -543,7 +537,6 @@ function util.k2matter(params, only_deconversion)
               },
               params.icon,
             },
-            effects = {},
             prerequisites = {"kr-matter-processing"},
             unit =
             {
@@ -566,11 +559,12 @@ function util.k2matter(params, only_deconversion)
               },
               time = 45,
             },
+            effects = {}
             -- (ignore for now) localised_name = {"technology-name.k2-conversion", {"item-name."..params.k2matter.item_name}},
           },
         })
   end
-  if only_deconversion then
+  if params.k2matter.only_deconversion then
     matter.make_deconversion_recipe(params.k2matter)
   else
     matter.make_recipes(params.k2matter)
@@ -681,7 +675,7 @@ function util.se_matter(params)
                 {"se-astronomic-science-pack-4", 1},
                 {"se-energy-science-pack-4", 1},
                 {"se-material-science-pack-4", 1},
-                {"kr-matter-tech-card", 1},
+                {"matter-tech-card", 1},
                 {"se-deep-space-science-pack-1", 1},
               }
               
