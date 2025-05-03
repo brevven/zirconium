@@ -1,6 +1,6 @@
 local util = require("data-util");
 
-if mods.Krastorio2 then
+if util.k2() then
   util.replace_some_ingredient("low-density-structure", "copper-plate", 5, "zirconia", 5)
 else
   util.replace_some_ingredient("low-density-structure", "copper-plate", 10, "zirconia", 10)

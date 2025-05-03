@@ -32,7 +32,7 @@ util.set_category("cermet", "kiln-smelting")
 if util.me.early() then
   util.replace_some_ingredient("stone-furnace", "stone", 1, "zircon", 1)
 end
-if not mods["Krastorio2"] then
+if not util.k2() then
   util.replace_some_ingredient("steel-furnace", "stone-brick", 4, "zirconia", 6)
   if mods.bzsilicon then -- this uses enough stone, we can just replace
     util.replace_ingredient("electric-furnace", "stone-brick", "zirconia")
@@ -58,7 +58,7 @@ util.set_product_amount("explosives", "explosives", 3)
 
 util.add_ingredient("nuclear-reactor", nuclear_z, 100)
 
-local ufc_amt = mods["Krastorio2"] and 1 or 5
+local ufc_amt = util.k2() and 1 or 5
 if not mods.Atomic_Overhaul then
   util.replace_some_ingredient("uranium-fuel-cell", nuclear_plate, 5, nuclear_z, ufc_amt) 
 end
@@ -103,7 +103,7 @@ if util.fe_plus("Machines") then
 end
 
 -- Krastorio2
-if mods["Krastorio2"] then
+if util.k2() then
 
   util.replace_some_ingredient("matter-stabilizer", "imersium-plate", 1, "zirconium-plate", 5)
   util.add_ingredient("kr-advanced-furnace", "zirconia", 60)

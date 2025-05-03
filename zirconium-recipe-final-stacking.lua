@@ -9,10 +9,10 @@ if deadlock and deadlock["add_stack"] then
   if util.me.use_cermet() then
     deadlock.add_stack("cermet",  "__bzzirconium__/graphics/icons/stacked/cermet-stacked.png", "deadlock-stacking-2", 128)
   end
-  if mods["Krastorio2"] then
+  if util.k2() then
     deadlock.add_stack("enriched-zircon", "__bzzirconium__/graphics/icons/stacked/enriched-zircon-stacked.png" , "deadlock-stacking-2", 128)
   end
-  if mods["Krastorio2"] or mods["space-exploration"] then
+  if util.k2() or mods["space-exploration"] then
     deadlock.add_stack("zirconium-tungstate", nil, "deadlock-stacking-2", 64)
   end
   if mods["space-exploration"] then
@@ -28,10 +28,10 @@ if deadlock_crating then
   if util.me.use_cermet() then
     deadlock_crating.add_crate("cermet", "deadlock-crating-2")
   end
-  if mods["Krastorio2"] then
+  if util.k2() then
     deadlock_crating.add_crate("enriched-zircon", "deadlock-crating-2")
   end
-  if mods["Krastorio2"] or mods["space-exploration"] then
+  if util.k2() or mods["space-exploration"] then
     deadlock_crating.add_crate("zirconium-tungstate", "deadlock-crating-2")
   end
   if mods["space-exploration"] then

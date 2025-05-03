@@ -1,6 +1,6 @@
 -- Matter recipes for Krastorio2
-if mods["Krastorio2"] then
-  local util = require("__bzzirconium__.data-util");
+local util = require("__bzzirconium__.data-util");
+if util.k2() then
 
   util.k2matter({
     k2matter = {
@@ -15,7 +15,7 @@ if mods["Krastorio2"] then
       unlocked_by = "zirconium-matter-processing",
     },
     k2baseicon = "stone",
-    icon = { icon = "__bzzirconium__/graphics/icons/zircon.png", icon_size = 64, scale = 1.25}
+    icon = { icon = "__bzzirconium__/graphics/icons/zircon.png", icon_size = 128, scale = 0.5}
   }, false)
 
   util.k2matter({

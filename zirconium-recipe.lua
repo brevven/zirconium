@@ -24,7 +24,7 @@ data:extend({
     category = "smelting",
     allow_productivity = true,
     order = "z[zirconia]",
-    icons = (mods["Krastorio2"] and
+    icons = (util.k2() and
         {
           { icon = "__bzzirconium__/graphics/icons/zirconia.png", icon_size = 128 },
           { icon = "__bzzirconium__/graphics/icons/zircon.png", icon_size = 128,  scale=0.25, shift= {-8, -8}},
@@ -32,7 +32,7 @@ data:extend({
           { icon = "__bzzirconium__/graphics/icons/zirconia.png", icon_size = 128,  },
         }
 ),
-     -- (mods["Krastorio2"] and
+     -- (util.k2() and
      --    {
      --      main_product = "zirconia",
      --      enabled = false,
@@ -115,7 +115,7 @@ data:extend({
     subgroup = "raw-material",
     auto_recycle = false,
     order = "d[zirconium-plate]",
-    icons = (mods["Krastorio2"] and
+    icons = (util.k2() and
         {
           { icon = "__bzzirconium__/graphics/icons/zirconium-plate.png", icon_size = 128 },
           { icon = "__bzzirconium__/graphics/icons/zirconia.png", icon_size = 128,  scale=0.125, shift= {-8, -8}},
@@ -123,7 +123,7 @@ data:extend({
           { icon = "__bzzirconium__/graphics/icons/zirconium-plate.png", icon_size = 128,  },
         }
 ),
-    -- (mods["Krastorio2"] and
+    -- (util.k2() and
     --    {
     --      enabled = false,
     --      energy_required = 8,
@@ -413,7 +413,7 @@ util.add_unlock("foundry", "zirconium-gettering")
 end
 
 -- Zirconium Tungstate, only if needed
-if mods["space-age"] or (mods.bztungsten and (mods["Krastorio2"] or mods["space-exploration"])) then
+if mods["space-age"] or (mods.bztungsten and (util.k2() or mods["space-exploration"])) then
 data:extend({
   {
     type = "item",

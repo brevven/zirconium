@@ -16,7 +16,7 @@ if util.me.ammo() then
   end
   table.insert(mag, {type="fluid", name="heavy-oil", amount=ct})
 
-  if not mods.Krastorio2 or not util.get_setting("kr-more-realistic-weapon") then
+  if not util.k2() or not util.get_setting("kr-more-realistic-weapon") then
     table.insert(mag, util.item("piercing-rounds-magazine", ct))
 
     data:extend({

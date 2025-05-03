@@ -51,7 +51,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     main_product = "molten-zirconium",
     subgroup = "zirconium",
     results = {
-      {type = "fluid", name = "molten-zirconium", amount = mods.Krastorio2 and 750 or 900},
+      {type = "fluid", name = "molten-zirconium", amount = util.k2() and 750 or 900},
     },
     energy_required = 60,
     ingredients = {
@@ -104,7 +104,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "molten-zirconium"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot"})
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "zirconium-ingot-to-plate"})
-  if mods["Krastorio2"] then
+  if util.k2() then
     util.set_item_subgroup("enriched-zircon", "zirconium")
     se_delivery_cannon_recipes["enriched-zirconium"] = {name= "enriched-zirconium"}
   end
@@ -117,7 +117,7 @@ else
   data.raw.item["zirconium-plate"].subgroup = "plates"
   data.raw.recipe["zirconium-plate"].subgroup = "plates"
 
-  if mods["Krastorio2"] then
+  if util.k2() then
     data:extend({
     {
       type = "recipe",
