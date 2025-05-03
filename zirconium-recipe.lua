@@ -191,7 +191,7 @@ data:extend({
 -- cermet only if setting enabled
 if util.me.use_cermet() then
 local cermet_i = {util.item("zirconia", 2), util.item("copper-plate", 1)}
-if mods.bztitanium then
+if mods.bztitanium and data.raw.item["titanium-plate"] then
   local tme = require("__bztitanium__.me");
   table.insert(cermet_i, util.item(tme.titanium_plate, 1))
 end
@@ -449,7 +449,7 @@ end
 end
 
 -- Zircaloy-4 only if needed
-if mods.bztin then
+if mods.bztin and data.raw.item["tin-plate"] then
 require("basic-foundry")
 local zircaloyi = {
   util.item("zirconium-sponge", 17),
