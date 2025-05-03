@@ -449,7 +449,7 @@ end
 end
 
 -- Zircaloy-4 only if needed
-if mods.bztin and data.raw.item["tin-plate"] then
+if mods.bztin and not mods.bobplates then
 require("basic-foundry")
 local zircaloyi = {
   util.item("zirconium-sponge", 17),
