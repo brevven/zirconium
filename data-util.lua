@@ -514,15 +514,15 @@ end
 
 -- k2 matter 
 -- params: {k2matter}, k2baseicon , {icon}
-function util.k2matter(params)
-  local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
+function util.k2matter(params, only_deconversion)
+  local matter = require("__Krastorio2__/prototypes/libraries/matter")
   if mods["space-exploration"] then 
-    params.k2matter.need_stabilizer = true
+    params.k2matter.needs_stabilizer = true
   end
-  if not params.k2matter.minimum_conversion_quantity then
-    params.k2matter.minimum_conversion_quantity = 10
+  if not params.k2matter.material.amount then
+    params.k2matter.material.amount = 10
   end
-  if not data.raw.technology[params.k2matter.unlocked_by_technology] then
+  if not data.raw.technology[params.k2matter.unlocked_by] then
     local icon = ""
     if params.k2baseicon then
       icon = util.k2assets().."/technologies/matter-"..params.k2baseicon..".png"
@@ -534,7 +534,7 @@ function util.k2matter(params)
         {
           {
             type = "technology",
-            name = params.k2matter.unlocked_by_technology,
+            name = params.k2matter.unlocked_by,
             icons =
             {
               {
@@ -543,6 +543,7 @@ function util.k2matter(params)
               },
               params.icon,
             },
+            effects = {},
             prerequisites = {"kr-matter-processing"},
             unit =
             {
@@ -561,7 +562,7 @@ function util.k2matter(params)
               {
                 {"production-science-pack", 1},
                 {"utility-science-pack", 1},
-                {"matter-tech-card", 1}
+                {"kr-matter-tech-card", 1}
               },
               time = 45,
             },
@@ -569,7 +570,11 @@ function util.k2matter(params)
           },
         })
   end
-  matter.createMatterRecipe(params.k2matter)
+  if only_deconversion then
+    matter.make_deconversion_recipe(params.k2matter)
+  else
+    matter.make_recipes(params.k2matter)
+  end
 end
 
 
@@ -676,7 +681,7 @@ function util.se_matter(params)
                 {"se-astronomic-science-pack-4", 1},
                 {"se-energy-science-pack-4", 1},
                 {"se-material-science-pack-4", 1},
-                {"matter-tech-card", 1},
+                {"kr-matter-tech-card", 1},
                 {"se-deep-space-science-pack-1", 1},
               }
               
