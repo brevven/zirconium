@@ -57,8 +57,8 @@ data:extend({
       name = "enriched-zirconia-smelting",
       icons =
       {
-        { icon = "__bzzirconium__/graphics/icons/zirconia.png", icon_size = 128, icon_mipmaps = 3, },
-        { icon = "__bzzirconium__/graphics/icons/enriched-zircon.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
+        { icon = "__bzzirconium__/graphics/icons/zirconia.png",        icon_size = 128},
+        { icon = "__bzzirconium__/graphics/icons/enriched-zircon.png", icon_size = 128, scale = 0.125,    shift = { -8, -8 } },
       },
       category = "smelting",
       energy_required = 24,
@@ -66,7 +66,7 @@ data:extend({
       always_show_made_in = true,
       always_show_products = true,
       allow_productivity = true,
-      ingredients = 
+      ingredients =
       {
         { type = "item", name = "enriched-zircon", amount = 5}
       },

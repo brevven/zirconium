@@ -105,14 +105,14 @@ end
 -- Krastorio2
 if mods["Krastorio2"] then
 
-  util.replace_some_ingredient("matter-stabilizer", "imersium-plate", 1, "zirconium-plate", 5)
+  util.replace_some_ingredient("kr-matter-stabilizer", "kr-imersium-plate", 1, "zirconium-plate", 5)
   util.add_ingredient("kr-advanced-furnace", "zirconia", 60)
   if util.me.use_cermet() then
-    util.add_ingredient("ai-core", "cermet", 2)
-    util.add_ingredient("kr-matter-assembler", "cermet", 4)
+    util.add_ingredient("kr-ai-core", "cermet", 2)
+    util.add_ingredient("kr-matter-associator", "cermet", 4)
   end
-  util.add_ingredient("kr-fusion-reactor", nuclear_z, 350)
-  util.add_ingredient("kr-antimatter-reactor", nuclear_z, 350)
+  util.add_ingredient("kr-fusion-reactor-equipment", nuclear_z, 350)
+  util.add_ingredient("kr-antimatter-reactor-equipment", nuclear_z, 350)
 
   if util.me.early() then
     util.replace_some_ingredient("stone-brick", "stone", 5, "zircon", 5)
@@ -122,7 +122,7 @@ if mods["Krastorio2"] then
   end
 
   if not mods.bztungsten then
-    util.add_ingredient("matter-research-data", "zirconia", 5)
+    util.add_ingredient("kr-matter-research-data", "zirconia", 5)
   end
 end
 
